@@ -33,13 +33,19 @@ open class UserManger {
 
     }
 
-    open func SignInFaceback(_ userName:String,UserEmail:String,callback:@escaping (_ sucssesToSighnIN:Bool)->()){
+    open func SignInFaceback(UserEmail:String,userName:String,callback:@escaping (_ sucssesToSighnIN:Bool)->()){
         let userPassword:String = userName
-        API.login(UserEmail, password: userPassword, callback: {(success,result)-> Void in
-            if (success){
-                
+        API.signIn(email: UserEmail, password: userPassword,name: userName, callback:{ (success,result)-> Void in
+            if (success) {
+                callback(true)
             }
+            else {
+                callback(false)
+            }
+            
+            
         })
+        
     }
     open func getUserMe(_ userId:Int,callback:(_ sucssesToGetDeteailUser:Bool //,User[id]:User
         )->()){
@@ -47,7 +53,22 @@ open class UserManger {
             
             callback(true) //and the UserObject according to id
     }
-//    public func getLocation(locationUser:Location,callback:(sucsses:Bool,)->()){
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //    public func getLocation(locationUser:Location,callback:(sucsses:Bool,)->()){
         
  //   }
  //   public func getFreindsLocation(locationOfMyFreindsList:[Location],callback:(sucsses:Bool,listLocationOfmyFreinds:[])){

@@ -12,11 +12,15 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 
 class LoginsViewController: UIViewController,FBSDKLoginButtonDelegate {
+    
+    
+    @IBOutlet weak var indicatorActivity: UIActivityIndicatorView!
     @IBOutlet weak var loginWithSoundMe: UIImageView!
     @IBOutlet weak var loginWithFacebook: FBSDKLoginButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        indicatorActivity.isHidden = true
         loginWithFacebook.delegate = self
         loginWithFacebook.readPermissions = ["public_profile", "email", "user_friends"]
         
@@ -38,6 +42,7 @@ class LoginsViewController: UIViewController,FBSDKLoginButtonDelegate {
     }
     
     func actionLoginSoundMe(){
+        indicatorActivity.isHidden = false
         self.performSegue(withIdentifier: "goLoginSoundMe", sender: self)
 
     }
@@ -57,9 +62,10 @@ class LoginsViewController: UIViewController,FBSDKLoginButtonDelegate {
             
             if ((error) != nil)
             {
-                //Login error msg alert
+                let UserDataFaildMsg = "The user are not exited, or maybe connection failed"
+                let titleMsgPath = "connection faild"
+                self.msgError(titleMsg: titleMsgPath,detailMsg: UserDataFaildMsg)
                 print("Error: \(error)")
-                //hide
             }
             else
             {
@@ -67,16 +73,17 @@ class LoginsViewController: UIViewController,FBSDKLoginButtonDelegate {
                 let userName : String = newResult.value(forKey: "name") as! String
                 let userEmail : String = newResult.value(forKey: "email") as! String
                 print("User Detail:",userName,userEmail)
-                UserManger.Instance.SignInFaceback(userName, UserEmail: userEmail, callback: { (Bool) in
+                UserManger.Instance.SignInFaceback(UserEmail: userEmail, userName:userName, callback: { (Bool) in
                     ViewControllerUtils.doOnMain {
                         if Bool{
-                            //hide
+                            self.indicatorActivity.isHidden = true
                             
                             //self.performSegue(withIdentifier: "AlreadyLoginIn", sender: self)
                         }else{
-                            //hide
-                            
-                            //msg error stay on page
+                            self.indicatorActivity.isHidden = true
+                            let msgUserManagerError = "connection with the server failed"
+                            let titleUsermanagerError = "Error"
+                            self.msgError(titleMsg: titleUsermanagerError, detailMsg: msgUserManagerError)
                         }
                     }
                 })
@@ -87,6 +94,14 @@ class LoginsViewController: UIViewController,FBSDKLoginButtonDelegate {
     func loginButtonWillLogin(_ loginButton: FBSDKLoginButton!) -> Bool {
         return true
     }
+    
+    private func msgError(titleMsg:String? ,detailMsg: String){
+        
+        let msgAlert = UIAlertController(title: titleMsg, message: detailMsg, preferredStyle: UIAlertControllerStyle.alert)
+        msgAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(msgAlert, animated: true, completion: nil)
+    }
+    
     
     
     
