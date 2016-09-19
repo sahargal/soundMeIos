@@ -133,6 +133,10 @@
                                 </constraints>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" image="buttonImReady" translatesAutoresizingMaskIntoConstraints="NO" id="vfE-Z9-vfK"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gPx-NA-vlN">
+                                <frame key="frameInset" minX="169" minY="517" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -166,6 +170,7 @@
                     <connections>
                         <outlet property="emailTextFeild" destination="wyl-ZZ-14f" id="FAS-bP-ssW"/>
                         <outlet property="iAmReadyButton" destination="vfE-Z9-vfK" id="lM5-7T-d7Q"/>
+                        <outlet property="indicatorActivity" destination="gPx-NA-vlN" id="OTO-Bi-BeB"/>
                         <outlet property="passwordTextFeild" destination="zj6-Oc-2Oe" id="SHf-xi-2Ew"/>
                         <segue destination="PRC-9R-A4v" kind="show" identifier="moveToMain" id="pU9-vp-3WT"/>
                     </connections>
@@ -257,7 +262,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="vM6-fP-foD" customClass="StatusCell" customModule="SoundMe" customModuleProvider="target">
-                                        <rect key="frame" x="-12" y="10" width="343" height="380"/>
+                                        <rect key="frame" x="16" y="10" width="343" height="380"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="380"/>
@@ -570,7 +575,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ueu-9f-emq" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tj4-YA-BnO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="tj4-YA-BnO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -586,7 +591,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K5R-RV-6bV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="map" id="etl-hs-lik"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ql8-rA-ncS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ql8-rA-ncS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -617,6 +622,6 @@
         <image name="smallogo" width="78" height="31"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2Ab-HK-Hbi"/>
+        <segue reference="pU9-vp-3WT"/>
     </inferredMetricsTieBreakers>
 </document>

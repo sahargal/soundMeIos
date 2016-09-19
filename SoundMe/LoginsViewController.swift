@@ -42,7 +42,6 @@ class LoginsViewController: UIViewController,FBSDKLoginButtonDelegate {
     }
     
     func actionLoginSoundMe(){
-        indicatorActivity.isHidden = false
         self.performSegue(withIdentifier: "goLoginSoundMe", sender: self)
 
     }
