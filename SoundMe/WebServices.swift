@@ -19,7 +19,7 @@ class WebServices {
     func postSyncJSON(params : Dictionary<String, String>, url : String, postCompleted : @escaping (_ success: Bool, _ result : ServerResponse ) -> ()) {
         let mutex : DispatchSemaphore = DispatchSemaphore(value: 0)
         let completion = postCompleted
-        postAsyncJSON(params: params, url: url, postCompleted: {success, result -> Void in
+        postAsyncJSON(params: /*params*/["":""], url: url, postCompleted: {success, result -> Void in
             completion(success, result)
             mutex.signal()
         })

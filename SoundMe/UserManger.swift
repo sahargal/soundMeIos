@@ -41,19 +41,49 @@ open class UserManger {
             }
             else {
                 callback(false)
-            }
+                 }
             
             
         })
         
     }
-    open func getUserMe(_ userId:Int,callback:(_ sucssesToGetDeteailUser:Bool //,User[id]:User
-        )->()){
+    open func getUserMe(_ userId:Int,callback:(_ succcess:Bool,_ result:String)->()){
             //cheak if id  exist
             
-            callback(true) //and the UserObject according to id
+            callback(true,"result") //type esponseServer(jason)
+              }
+    
+    ////changeRadius/////
+    
+    open func changeRadius(sessionKey:String,radius:String,callback:@escaping (_ success:Bool,_ reslut:String)->()){
+        API.changeRadiusValue(radius: radius, sessionKey: sessionKey, callback:
+            { (success,result)->() in
+            if success
+            {
+                callback(true,"result")
+            }
+            else{
+                callback(false,"")
+                }
+            
+            
+           })
     }
-
+ ///////LOG OUT
+    open func LogOut(sessionKey:String, callback:@escaping (_ success:Bool,_ result:String)->()){
+        API.LogOut(sessionKey: sessionKey, callback:
+            {(success,result)->() in
+                if success
+                {
+                    callback(true,"result")
+                }
+                else
+                {
+                    callback(false,"")
+                }
+        
+            })
+    }
     
     
     

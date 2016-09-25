@@ -19,7 +19,8 @@ class LoginsViewController: UIViewController,FBSDKLoginButtonDelegate {
     @IBOutlet weak var loginWithFacebook: FBSDKLoginButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         indicatorActivity.isHidden = true
         loginWithFacebook.delegate = self
         loginWithFacebook.readPermissions = ["public_profile", "email", "user_friends"]
