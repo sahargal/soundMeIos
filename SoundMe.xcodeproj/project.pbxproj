@@ -17,6 +17,17 @@
 		04AE4C6C1D89FE1700A0C1FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AE4C6B1D89FE1700A0C1FE /* LaunchScreen.storyboard */; };
 		04AE4C6F1D89FFC000A0C1FE /* LoginsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE4C6E1D89FFC000A0C1FE /* LoginsViewController.swift */; };
 		04DE8C551D8C2F07009112CA /* ViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE8C541D8C2F07009112CA /* ViewControllerUtils.swift */; };
+		330D9B711D9FA1F4009281B3 /* sessionkey.json in Resources */ = {isa = PBXBuildFile; fileRef = 330D9B701D9FA1F4009281B3 /* sessionkey.json */; };
+		330D9B731D9FA464009281B3 /* Acount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D9B721D9FA464009281B3 /* Acount.swift */; };
+		330D9B751D9FAF89009281B3 /* AppSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D9B741D9FAF89009281B3 /* AppSession.swift */; };
+		330D9B771D9FAFCA009281B3 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D9B761D9FAFCA009281B3 /* SessionManager.swift */; };
+		330D9B791D9FB261009281B3 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 330D9B781D9FB261009281B3 /* users.json */; };
+		330D9B7B1D9FC67D009281B3 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D9B7A1D9FC67D009281B3 /* SettingViewController.swift */; };
+		330D9B7D1D9FE67F009281B3 /* loginUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 330D9B7C1D9FE67F009281B3 /* loginUser.json */; };
+		330D9B7F1D9FED6C009281B3 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D9B7E1D9FED6C009281B3 /* FeedViewController.swift */; };
+		330D9B811D9FEF2A009281B3 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D9B801D9FEF2A009281B3 /* PlayerViewController.swift */; };
+		330D9B841DA039C4009281B3 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D9B821DA039C4009281B3 /* CustomView.swift */; };
+		330D9B851DA039C4009281B3 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330D9B831DA039C4009281B3 /* CustomView.xib */; };
 		33115F8A1C8AE59700D73A9A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33115F841C8AE59700D73A9A /* Bolts.framework */; };
 		33115F8B1C8AE59700D73A9A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33115F851C8AE59700D73A9A /* Parse.framework */; };
 		33115F8C1C8AE59700D73A9A /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33115F861C8AE59700D73A9A /* ParseFacebookUtils.framework */; };
@@ -51,7 +62,6 @@
 		333C89DA1D8D6AC200BD6446 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333C89D81D8D6AC200BD6446 /* MapViewController.swift */; };
 		333C89DC1D8D6BFB00BD6446 /* ListSongForUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333C89DB1D8D6BFB00BD6446 /* ListSongForUserViewController.swift */; };
 		33CF860A1C8AE30A0037C701 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CF86091C8AE30A0037C701 /* AppDelegate.swift */; };
-		33CF860C1C8AE30A0037C701 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CF860B1C8AE30A0037C701 /* ViewController.swift */; };
 		33CF86111C8AE30A0037C701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33CF86101C8AE30A0037C701 /* Assets.xcassets */; };
 		33CF861F1C8AE30A0037C701 /* SoundMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CF861E1C8AE30A0037C701 /* SoundMeTests.swift */; };
 		33CF862A1C8AE30A0037C701 /* SoundMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CF86291C8AE30A0037C701 /* SoundMeUITests.swift */; };
@@ -88,6 +98,17 @@
 		04AE4C6B1D89FE1700A0C1FE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04AE4C6E1D89FFC000A0C1FE /* LoginsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginsViewController.swift; sourceTree = "<group>"; };
 		04DE8C541D8C2F07009112CA /* ViewControllerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUtils.swift; sourceTree = "<group>"; };
+		330D9B701D9FA1F4009281B3 /* sessionkey.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sessionkey.json; sourceTree = "<group>"; };
+		330D9B721D9FA464009281B3 /* Acount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acount.swift; sourceTree = "<group>"; };
+		330D9B741D9FAF89009281B3 /* AppSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSession.swift; sourceTree = "<group>"; };
+		330D9B761D9FAFCA009281B3 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		330D9B781D9FB261009281B3 /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		330D9B7A1D9FC67D009281B3 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		330D9B7C1D9FE67F009281B3 /* loginUser.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loginUser.json; sourceTree = "<group>"; };
+		330D9B7E1D9FED6C009281B3 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		330D9B801D9FEF2A009281B3 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		330D9B821DA039C4009281B3 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		330D9B831DA039C4009281B3 /* CustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		33115F841C8AE59700D73A9A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library-1-6/Bolts.framework"; sourceTree = "<group>"; };
 		33115F851C8AE59700D73A9A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1-6/Parse.framework"; sourceTree = "<group>"; };
 		33115F861C8AE59700D73A9A /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "parse-library-1-6/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
@@ -123,7 +144,6 @@
 		333C89DB1D8D6BFB00BD6446 /* ListSongForUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSongForUserViewController.swift; sourceTree = "<group>"; };
 		33CF86061C8AE30A0037C701 /* SoundMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33CF86091C8AE30A0037C701 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		33CF860B1C8AE30A0037C701 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		33CF86101C8AE30A0037C701 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33CF86151C8AE30A0037C701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33CF861A1C8AE30A0037C701 /* SoundMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,6 +224,7 @@
 		04AE4C6D1D89FF3400A0C1FE /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				330D9B761D9FAFCA009281B3 /* SessionManager.swift */,
 				33115FA41C8AEE2600D73A9A /* UserManger.swift */,
 			);
 			name = Manager;
@@ -212,13 +233,16 @@
 		04AE4C701D89FFCA00A0C1FE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				330D9B821DA039C4009281B3 /* CustomView.swift */,
 				04AE4C6E1D89FFC000A0C1FE /* LoginsViewController.swift */,
-				33CF860B1C8AE30A0037C701 /* ViewController.swift */,
+				330D9B7A1D9FC67D009281B3 /* SettingViewController.swift */,
 				333C89D71D8D6AC200BD6446 /* MainTabBarViewController.swift */,
 				333C89D81D8D6AC200BD6446 /* MapViewController.swift */,
 				33F80B091D8D6FCC009DFD75 /* MeViewController.swift */,
 				333C89DB1D8D6BFB00BD6446 /* ListSongForUserViewController.swift */,
 				333C89D51D8D6AAA00BD6446 /* LoginWithSoundmeViewController.swift */,
+				330D9B7E1D9FED6C009281B3 /* FeedViewController.swift */,
+				330D9B801D9FEF2A009281B3 /* PlayerViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -227,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				04AE4C691D89FD7F00A0C1FE /* Main.storyboard */,
+				330D9B831DA039C4009281B3 /* CustomView.xib */,
 				04AE4C6B1D89FE1700A0C1FE /* LaunchScreen.storyboard */,
 			);
 			name = StoryBoard;
@@ -235,6 +260,8 @@
 		04DE8C531D8C2E44009112CA /* Utilitis */ = {
 			isa = PBXGroup;
 			children = (
+				330D9B741D9FAF89009281B3 /* AppSession.swift */,
+				330D9B721D9FA464009281B3 /* Acount.swift */,
 				04DE8C541D8C2F07009112CA /* ViewControllerUtils.swift */,
 			);
 			name = Utilitis;
@@ -308,6 +335,9 @@
 		33CF86081C8AE30A0037C701 /* SoundMe */ = {
 			isa = PBXGroup;
 			children = (
+				330D9B701D9FA1F4009281B3 /* sessionkey.json */,
+				330D9B781D9FB261009281B3 /* users.json */,
+				330D9B7C1D9FE67F009281B3 /* loginUser.json */,
 				04DE8C531D8C2E44009112CA /* Utilitis */,
 				04AE4C711D89FFF000A0C1FE /* StoryBoard */,
 				04AE4C701D89FFCA00A0C1FE /* ViewController */,
@@ -458,8 +488,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				330D9B791D9FB261009281B3 /* users.json in Resources */,
 				04AE4C6C1D89FE1700A0C1FE /* LaunchScreen.storyboard in Resources */,
+				330D9B7D1D9FE67F009281B3 /* loginUser.json in Resources */,
+				330D9B711D9FA1F4009281B3 /* sessionkey.json in Resources */,
 				04AE4C6A1D89FD7F00A0C1FE /* Main.storyboard in Resources */,
+				330D9B851DA039C4009281B3 /* CustomView.xib in Resources */,
 				33CF86111C8AE30A0037C701 /* Assets.xcassets in Resources */,
 				333C89C31D8D677D00BD6446 /* GoogleMaps.bundle in Resources */,
 			);
@@ -486,21 +520,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				330D9B751D9FAF89009281B3 /* AppSession.swift in Sources */,
 				33F80B0A1D8D6FCC009DFD75 /* MeViewController.swift in Sources */,
 				33115FA51C8AEE2600D73A9A /* UserManger.swift in Sources */,
+				330D9B841DA039C4009281B3 /* CustomView.swift in Sources */,
 				04AE4C6F1D89FFC000A0C1FE /* LoginsViewController.swift in Sources */,
-				33CF860C1C8AE30A0037C701 /* ViewController.swift in Sources */,
+				330D9B7F1D9FED6C009281B3 /* FeedViewController.swift in Sources */,
 				33CF86381C8AE4450037C701 /* API.swift in Sources */,
+				330D9B7B1D9FC67D009281B3 /* SettingViewController.swift in Sources */,
 				04DE8C551D8C2F07009112CA /* ViewControllerUtils.swift in Sources */,
 				333C89D61D8D6AAA00BD6446 /* LoginWithSoundmeViewController.swift in Sources */,
+				330D9B811D9FEF2A009281B3 /* PlayerViewController.swift in Sources */,
 				333C89DA1D8D6AC200BD6446 /* MapViewController.swift in Sources */,
 				04AE4C681D88B03B00A0C1FE /* ServerResponse.swift in Sources */,
 				04AE4C5E1D86BF1100A0C1FE /* User.swift in Sources */,
 				33CF860A1C8AE30A0037C701 /* AppDelegate.swift in Sources */,
 				333C89D91D8D6AC200BD6446 /* MainTabBarViewController.swift in Sources */,
 				04AE4C661D88AFAE00A0C1FE /* WebServices.swift in Sources */,
+				330D9B731D9FA464009281B3 /* Acount.swift in Sources */,
 				333C89DC1D8D6BFB00BD6446 /* ListSongForUserViewController.swift in Sources */,
 				04AE4C641D8829E200A0C1FE /* Location.swift in Sources */,
+				330D9B771D9FAFCA009281B3 /* SessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
