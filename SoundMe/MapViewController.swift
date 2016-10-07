@@ -11,9 +11,10 @@ import GoogleMaps
 
 class MapViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewDelegate {
     var locationManager:CLLocationManager!
-
+    var meUsers:[GMSMarker]!
     override func viewDidLoad() {
         super.viewDidLoad()
+   
         // Do any additional setup after loading the view.
     }
 
@@ -23,6 +24,8 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewDe
     }
     
     override func loadView() {
+        print(UserManger.Instance.users)
+        meUsers = [GMSMarker]()
         
         // Create a GMSCameraPosition that tells the map to display the
         // coordinate -33.86,151.20 at zoom level 6.
@@ -40,44 +43,50 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewDe
         mapView.delegate = self
         
         mapView.isMyLocationEnabled = false
-        
+        let loginUser = UserManger.Instance.loginUser
         view = mapView
         // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: latitude!, longitude: longitude!)
-        marker.title = "Dror"
-        marker.icon = UIImage(named: "soundMeIcon")
-        marker.snippet = ""
-        marker.map = mapView
+        let meMarker = GMSMarker()
+        meMarker.position = CLLocationCoordinate2D(latitude: latitude!, longitude: longitude!)
+        meMarker.title = loginUser.name
+        meMarker.icon = UIImage(named: "iconPinMe")
+        meMarker.snippet = String(loginUser.id)
+        meMarker.map = mapView
         
-        let marker1 = GMSMarker()
-        marker1.position = CLLocationCoordinate2D(latitude: 32.823535, longitude: 34.960456)
-        marker1.title = "Dror"
-        marker1.icon = UIImage(named: "soundUserIcon")
-        marker1.snippet = ""
-        marker1.map = mapView
         
-        let marker2 = GMSMarker()
-        marker2.position = CLLocationCoordinate2D(latitude: 32.823200, longitude: 34.960198)
-        marker2.title = "Dror"
-        marker2.icon = UIImage(named: "soundUserIcon")
-        marker2.snippet = ""
-        marker2.map = mapView
+        
+        let users = UserManger.Instance.users
+        for user in users{
+            let markers = GMSMarker()
+            markers.position = CLLocationCoordinate2D(latitude: user.location.latitude, longitude: user.location.longitude)
+            markers.title = user.name
+            markers.icon = UIImage(named: "iconPinOthers")
+            markers.snippet = String(user.id)
+            
+            meUsers.append(markers)
+            
+        }
+
+        for newMarker in meUsers{
+            newMarker.map = mapView
+        }
+
     }
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
         didMoveToNext()
     }
-//    func mapView(_ mapView: GMSMapView!, markerInfoWindow marker: GMSMarker!) -> UIView! {
-//        
-//        let infoWindow = CustomView(frame: CGRect(x: 0, y: 0, width: 196, height: 123))
-//        infoWindow.isUserInteractionEnabled = false
-//        let tapGesture = UILongPressGestureRecognizer(target: self, action: #selector(MapViewController.didMoveToNext))
-//        tapGesture.numberOfTapsRequired = 1
-//        infoWindow.drory.addGestureRecognizer(tapGesture)
-//        
-//        //infoWindow.label.text = "\(marker.position.latitude) \(marker.position.longitude)"
-//        return infoWindow
-//    }
+    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+        let infoWindow = CustomView(frame: CGRect(x: 0, y: 0, width: 232, height: 124))
+        infoWindow.isUserInteractionEnabled = false
+        let tapGesture = UILongPressGestureRecognizer(target: self, action: #selector(MapViewController.didMoveToNext))
+        tapGesture.numberOfTapsRequired = 1
+        infoWindow.name.text = marker.title
+        
+        return infoWindow
+    }
+    
+    
+    
     
     func didMoveToNext(){
         performSegue(withIdentifier: "moveDetial", sender: self)

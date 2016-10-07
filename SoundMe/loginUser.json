@@ -1,0 +1,14 @@
+{
+    "loginUser": [
+                  {
+                  "id": "1",
+                  "location": {
+                  "latitude": "32.823535",
+                  "longitude": "34.960456"
+                  },
+                  "name": "dror gal",
+                  "bday": "04.12.1989",
+                  "email": "drorygay@gmail.com"
+                  }
+                  ]
+}

@@ -23,29 +23,52 @@ open class API{
     /// all api funcs back with json object (nsdic)
     
     static func login(_ email:String,password:String,callback:@escaping (_ success:Bool,_ result:String)->()){
-        let url = "http://sahargever"
-       
         
-        if (email == "sir.x5x@gmail.com") && (password == "12345")
-          {
-        
-            callback(true,"")
-          }
-        else
-        {
-        WebServices.Instance.postSyncJSON(params: ["Email":email,"Password":password], url: url) { (success, result) -> () in
-            let sessionKey = result.getAsDictionary()!["sessionKey"] as! String
-            if sessionKey == ""{
-                callback(true, sessionKey)
-            }
-            else{
-                callback(false, "")
-                 }
+        do{
+            let path = Bundle.main.path(forResource: "sessionkey", ofType: "json")
+            let jsonData = NSData(contentsOfFile: path!)
+            let response = try JSONSerialization.jsonObject(with: jsonData as! Data, options: .mutableLeaves) as! NSDictionary
+            let sessionKey:String = response["sessionkey"] as! String
+            callback(true, sessionKey)
+        }catch{
+            print(error)
+            callback(false, "")
         }
-            
-}
+
     }
     
+    
+    static func getUsers(sessionKey:String,callback:@escaping (_ success:Bool,_ result:NSArray)->()){
+        
+        do{
+            let path = Bundle.main.path(forResource: "users", ofType: "json")
+            let jsonData = NSData(contentsOfFile: path!)
+            let response = try JSONSerialization.jsonObject(with: jsonData as! Data, options: .mutableLeaves) as! NSDictionary
+            
+            let users:NSArray = response["users"] as! NSArray
+            callback(true, users)
+        }catch{
+            print(error)
+            callback(false, [])
+        }
+       
+    }
+    
+    static func getLoginUser(sessionKey:String,callback:@escaping (_ success:Bool,_ result:NSArray)->()){
+        
+        do{
+            let path = Bundle.main.path(forResource: "loginUser", ofType: "json")
+            let jsonData = NSData(contentsOfFile: path!)
+            let response = try JSONSerialization.jsonObject(with: jsonData as! Data, options: .mutableLeaves) as! NSDictionary
+            
+            let users:NSArray = response["loginUser"] as! NSArray
+            callback(true, users)
+        }catch{
+            print(error)
+            callback(false, [])
+        }
+        
+    }
     
     static func signIn(email:String,password:String,name:String,callback: @escaping (_ success:Bool,_ result:String)->()) {
         let url = "http://sahargever"

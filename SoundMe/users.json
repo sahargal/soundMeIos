@@ -1,0 +1,64 @@
+{
+    "users": [
+              {
+              "id": "2",
+              "location": {
+              "latitude": "32.823535",
+              "longitude": "34.960158"
+              },
+              "name": "dorin gimpel",
+              "bday": "04.12.1989",
+              "email": "dorin@gmail.com"
+              },
+              {
+              "id": "3",
+              "location": {
+              "latitude": "32.823535",
+              "longitude": "34.960859"
+              },
+              "name": "dorin gimpel",
+              "bday": "04.12.1989",
+              "email": "dorin@gmail.com"
+              },
+              {
+              "id": "4",
+              "location": {
+              "latitude": "32.823535",
+              "longitude": "34.960260"
+              },
+              "name": "dorin gimpel",
+              "bday": "04.12.1989",
+              "email": "dorin@gmail.com"
+              },
+              {
+              "id": "5",
+              "location": {
+              "latitude": "32.823535",
+              "longitude": "34.960661"
+              },
+              "name": "dorin gimpel",
+              "bday": "04.12.1989",
+              "email": "dorin@gmail.com"
+              },
+              {
+              "id": "6",
+              "location": {
+              "latitude": "32.823535",
+              "longitude": "34.960562"
+              },
+              "name": "dorin gimpel",
+              "bday": "04.12.1989",
+              "email": "dorin@gmail.com"
+              },
+              {
+              "id": "7",
+              "location": {
+              "latitude": "32.823535",
+              "longitude": "34.96054635"
+              },
+              "name": "dorin gal",
+              "bday": "04.12.1989",
+              "email": "dorin@gmail.com"
+              }
+              ]
+}

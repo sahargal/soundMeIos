@@ -12,28 +12,16 @@ import Foundation
 open class UserManger {
 
     static let Instance = UserManger()
+    
+    
 
 
-
-    open func logInUser(_ email:String, password:String,callback:@escaping (_ success:Bool,_ result:String)->()){
-        API.login(email, password: password) { (success, result) -> () in
-            if (!success) {   //(x!) error!!
-            callback(true, "sucess")
-            }
-                
-            else {
-            callback(false, "error")
-            }
-        }
-        
-        
-    }
     
     open func SignInWithSoundMe(_ userName:String,UserEmail:String,userPassword:String,callback:(_ sucssesToSighnIN:Bool)->()){
 
     }
 
-    open func SignInFaceback(UserEmail:String,userName:String,callback:@escaping (_ sucssesToSighnIN:Bool)->()){
+    open func SignInFaceback(UserEmail:String,userName:String,callback:@escaping (_ sucsses:Bool)->()){
         let userPassword:String = userName
         API.signIn(email: UserEmail, password: userPassword,name: userName, callback:{ (success,result)-> Void in
             if (success) {
@@ -41,12 +29,42 @@ open class UserManger {
             }
             else {
                 callback(false)
-                 }
+            }
             
             
         })
         
     }
+    
+    open func getUsers(sessionKey:String,callback:@escaping (_ succcess:Bool)->()){
+        API.getUsers(sessionKey: "") { (success, result) in
+            if success{
+                self._users = [User]()
+                for user in result{
+                    self._users.append(User(json: user as! NSDictionary))
+                }
+                callback(true)
+            }else{
+                callback(false)
+            }
+        }
+    
+    }
+    
+    open func getLoginUser(sessionKey:String,callback:@escaping (_ succcess:Bool)->()){
+        API.getLoginUser(sessionKey: "") { (success, result) in
+            if success{
+                for user in result{
+                    self._loginUser = User(json: user as! NSDictionary)
+                }
+                callback(true)
+            }else{
+                callback(false)
+            }
+        }
+        
+    }
+    
     open func getUserMe(_ userId:Int,callback:(_ succcess:Bool,_ result:String)->()){
             //cheak if id  exist
             
@@ -84,43 +102,34 @@ open class UserManger {
         
             })
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    //    public func getLocation(locationUser:Location,callback:(sucsses:Bool,)->()){
-        
- //   }
- //   public func getFreindsLocation(locationOfMyFreindsList:[Location],callback:(sucsses:Bool,listLocationOfmyFreinds:[])){
-//    }
-    
-    //פןנקציות שמקבלות מידע מהapi
    
-    open func getDetailMyFriends() {
+    
+    
+    private var _loginUser: User!
+    
+    private (set) var loginUser: User {
+        get {
+            return _loginUser
+        }
+        set {
+            _loginUser = newValue
+        }
     }
-    open func logout(){
+    
+    
+    private var _users: [User]!
+    
+    private (set) var users: [User] {
+        get {
+            return _users
+        }
+        set {
+            _users = newValue
+        }
     }
     
 }
 
-//callback - מה הפוקנציה מחזירה(תשובה)
-// example for callback
-// public func cheackNewUserRegiteration(email:String,name:String,password:String,callback:(sucsses:Bool,result:String)->())
-// {
-
-//    callback(sucsses: true, result: "sucess to sign in")
-//    }
-// }
 
 
 

@@ -12,57 +12,87 @@ import UIKit
 
 open class User {
     
-    // userId name birthday need to be let but the function createnewUser wont work
- 
-    var userId: Int!
-    var userName: String!
-    var userPassword: String!
-    var userIcon: UIImage!
-    var userBirthDayDate: String!
-  //var userLocation: Location!
- // var userSongList: [SongList]!
-    private var _userRadius: String!
-    var userSongList = ["my name","balbeli oto","al taasi lo heshbon"]
-    var userArray = [User]()
+    init(id:Int,name:String,email:String,icon:UIImage,bday:String,location:Location){
+        _id = id
+        _name = name
+        _email = email
+        _icon = icon
+        _bday = bday
+        _location = location
+    }
     
-    init(userId:Int,userName:String,userPassword:String,userIcon:UIImage ,userBirthDayDate:String,userRadius:String)
-    {
-        
-        self.userId = userId
-        self.userName = userName
-        self.userPassword = userPassword
-        self.userIcon = userIcon
-        self.userBirthDayDate = userBirthDayDate
-        self.userRadius = userRadius
-        userArray.append(User.init(userId: self.userId, userName: self.userName, userPassword: self.userPassword, userIcon: self.userIcon, userBirthDayDate: self.userBirthDayDate,userRadius: self.userRadius))
-        }
-        
-        
+    init(json:NSDictionary) {
+        _id = Int(json["id"] as! String)!
+        _name = json["name"] as! String
+        _icon = UIImage(named: "me")!
+        _location = Location(json: json["location"] as! NSDictionary)
+        _email = json["email"] as! String
+        _bday = json["bday"] as! String
+    }
+   
     
-    
-     init(){
-        userName = ""
-        userPassword = ""
-        userIcon = UIImage(named: "poop")
-        userBirthDayDate = ""
-        userRadius = "2"
-           }
-    
-    private (set) var userRadius: String {
+    private var _id: Int
+
+    private (set) var id: Int {
         get {
-            return _userRadius
+            return _id
         }
         set {
-            _userRadius = newValue
+            _id = newValue
+        }
+    }
+    
+    private var _name: String
+    
+    private (set) var name: String {
+        get {
+            return _name
+        }
+        set {
+            _name = newValue
+        }
+    }
+    
+    private var _email: String
+    private (set) var email: String {
+        get {
+            return _email
+        }
+        set {
+            _email = newValue
         }
     }
     
     
+    private var _icon: UIImage
+    private (set) var icon: UIImage {
+        get {
+            return _icon
+        }
+        set {
+            _icon = newValue
+        }
+    }
     
- //   public init(Jason){}
-
+    private var _bday: String
+    private (set) var bday: String {
+        get {
+            return _bday
+        }
+        set {
+            _bday = newValue
+        }
+    }
     
-    
+    private var _location: Location
+    private (set) var location: Location {
+        get {
+            return _location
+        }
+        set {
+            _location = newValue
+        }
+    }
 }
 
     

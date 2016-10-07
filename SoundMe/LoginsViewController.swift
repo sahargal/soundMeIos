@@ -19,22 +19,24 @@ class LoginsViewController: UIViewController,FBSDKLoginButtonDelegate {
     @IBOutlet weak var loginWithFacebook: FBSDKLoginButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        if (FBSDKAccessToken.current() != nil){
+            self.performSegue(withIdentifier: "alreadyLoginIn", sender: self)
+        }
+            indicatorActivity.isHidden = true
+            loginWithFacebook.delegate = self
+            loginWithFacebook.readPermissions = ["public_profile", "email", "user_friends"]
+            
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(LoginsViewController.actionLoginSoundMe))
+            tapGesture.numberOfTapsRequired = 1
+            self.loginWithSoundMe.addGestureRecognizer(tapGesture)
+            
+            UIGraphicsBeginImageContext(self.view.frame.size)
+            UIImage(named: "backgroundLogin")!.draw(in: self.view.bounds)
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            self.view.backgroundColor = UIColor(patternImage: image!)
         
         
-        indicatorActivity.isHidden = true
-        loginWithFacebook.delegate = self
-        loginWithFacebook.readPermissions = ["public_profile", "email", "user_friends"]
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(LoginsViewController.actionLoginSoundMe))
-        tapGesture.numberOfTapsRequired = 1
-        self.loginWithSoundMe.addGestureRecognizer(tapGesture)
-        
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        UIImage(named: "backgroundLogin")!.draw(in: self.view.bounds)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        self.view.backgroundColor = UIColor(patternImage: image!)
-
     }
 
     override func didReceiveMemoryWarning() {

@@ -9,6 +9,7 @@
 import Foundation
 
 class ServerResponse{
+
     var serverResult:Data
     var valid:Bool = false
     var responseDictionary:NSDictionary?
