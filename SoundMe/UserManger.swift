@@ -65,11 +65,24 @@ open class UserManger {
         
     }
     
-    open func getUserMe(_ userId:Int,callback:(_ succcess:Bool,_ result:String)->()){
-            //cheak if id  exist
-            
-            callback(true,"result") //type esponseServer(jason)
-              }
+    open func getSongList(userId:Int)->[Song] {
+        for user in users {
+            if user.id == userId {
+                return user.songList
+            }
+            else {
+                continue
+            }
+        }
+        return [Song]()
+    }
+    
+    
+    
+    
+    
+    
+
     
     ////changeRadius/////
     

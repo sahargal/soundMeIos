@@ -12,13 +12,14 @@ import UIKit
 
 open class User {
     
-    init(id:Int,name:String,email:String,icon:UIImage,bday:String,location:Location){
+    init(id:Int,name:String,email:String,icon:UIImage,bday:String,location:Location,songList:[Song]){
         _id = id
         _name = name
         _email = email
         _icon = icon
         _bday = bday
         _location = location
+        _songList = songList
     }
     
     init(json:NSDictionary) {
@@ -28,6 +29,7 @@ open class User {
         _location = Location(json: json["location"] as! NSDictionary)
         _email = json["email"] as! String
         _bday = json["bday"] as! String
+        _songList = json["songList"] as! Array  //until the factory will create
     }
    
     
@@ -91,6 +93,16 @@ open class User {
         }
         set {
             _location = newValue
+        }
+    }
+    
+    private var _songList: [Song]
+    private (set) var songList:[Song] {
+        get {
+                return _songList
+        }
+        set {
+                _songList = newValue
         }
     }
 }
