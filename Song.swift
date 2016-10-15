@@ -42,13 +42,13 @@ public class Song {
     
     init(json:NSDictionary) {
         
-        _name = json["Name"] as! String
+        _name = json["name"] as! String
         
-        _artist = json["Artist"] as! String
+        _artist = json["artist"] as! String
         
-        _time = json["Time"] as! String
+        _time = json["time"] as! String
         
-        _icon = json["Icon"] as! UIImage
+        _icon = UIImage(named:"me")!//json["icon"] as! UIImage
         
     }
     

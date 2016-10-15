@@ -29,7 +29,13 @@ open class User {
         _location = Location(json: json["location"] as! NSDictionary)
         _email = json["email"] as! String
         _bday = json["bday"] as! String
-        _songList = json["songList"] as! Array  //until the factory will create
+        let songsList = json["songList"] as! NSArray
+        var songs:[Song] = [Song]()
+        for song in songsList{
+            let newSong = Song(json: song as! NSDictionary)
+            songs.append(newSong)
+        }
+        _songList = songs  //until the factory will create
     }
    
     

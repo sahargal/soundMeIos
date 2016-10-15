@@ -12,6 +12,8 @@ import GoogleMaps
 class MapViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewDelegate {
     var locationManager:CLLocationManager!
     var meUsers:[GMSMarker]!
+    var users:[User]!
+    var id = 0
     override func viewDidLoad() {
         super.viewDidLoad()
    
@@ -26,7 +28,8 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewDe
     override func loadView() {
         print(UserManger.Instance.users)
         meUsers = [GMSMarker]()
-        
+        users = UserManger.Instance.users
+
         // Create a GMSCameraPosition that tells the map to display the
         // coordinate -33.86,151.20 at zoom level 6.
         locationManager = CLLocationManager()
@@ -55,7 +58,6 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewDe
         
         
         
-        let users = UserManger.Instance.users
         for user in users{
             let markers = GMSMarker()
             markers.position = CLLocationCoordinate2D(latitude: user.location.latitude, longitude: user.location.longitude)
@@ -81,14 +83,30 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewDe
         let tapGesture = UILongPressGestureRecognizer(target: self, action: #selector(MapViewController.didMoveToNext))
         tapGesture.numberOfTapsRequired = 1
         infoWindow.name.text = marker.title
-        
+        id = Int(marker.snippet!)!
         return infoWindow
     }
     
     
     
+    var userToList:User!
+
     
     func didMoveToNext(){
+        for user in users{
+            if user.id == id{
+                userToList = user
+            }
+        }
         performSegue(withIdentifier: "moveDetial", sender: self)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "moveDetial"{
+            if let listSongForUserViewController = segue.destination as? ListSongForUserViewController {
+                listSongForUserViewController.user = userToList
+            }
+        }
     }
 }

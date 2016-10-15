@@ -1,374 +1,12 @@
 {
     "users": [
               {
-              "id": "2",
+              "id": "1",
               "location": {
-              "latitude": "32.823535",
-              "longitude": "34.960158"
+              "latitude": "32.820082",
+              "longitude": "34.960671"
               },
-              "name": "dorin gimpel",
-              "bday": "04.12.1989",
-              "email": "dorin@gmail.com","songList": [
-                                                      {
-                                                      "name": "bubble set 2015",
-                                                      "artist":"Bubble",
-                                                      "time": "01:11:24",
-                                                      "icon": "bubble.jpg",
-                                                      "type": "out",
-                                                      "file": "https://www.youtube.com/watch?v=SVSa22Qkn4M"
-                                                      },
-                                                      {
-                                                      "name": "sipor yashan",
-                                                      "artist":"omer adaon & liran danino",
-                                                      "time": "04:02",
-                                                      "icon": "omer.jpg",
-                                                      "type": "out",
-                                                      "file": "https://www.youtube.com/watch?v=u1glMDHNruQ"
-                                                      },
-                                                      {
-                                                      "name": "rahok mekan",
-                                                      "artist":"eyal golan",
-                                                      "time": "06:24",
-                                                      "icon": "golan.jpg",
-                                                      "type": "out",
-                                                      "file": "https://www.youtube.com/watch?v=TySTS8gntLc"
-                                                      },
-                                                      {
-                                                      "name": "stam",
-                                                      "artist":"static & ben el",
-                                                      "time": "02:48",
-                                                      "icon": "static.jpg",
-                                                      "type": "out",
-                                                      "file": "https://www.youtube.com/watch?v=SOc5ULYfITY"
-                                                      },
-                                                      {
-                                                      "name": "af ehad",
-                                                      "artist":"eden ben zaken",
-                                                      "time": "03:13",
-                                                      "icon": "eden.jpg",
-                                                      "type": "out",
-                                                      "file": "https://www.youtube.com/watch?v=oRYWacngxyI"
-                                                      },
-                                                      {
-                                                      "name": "kol ahyir shelano",
-                                                      "artist":"eden ben zaken & peer tasi",
-                                                      "time": "04:39",
-                                                      "icon": "edenPeer.jpg",
-                                                      "type": "out",
-                                                      "file": "https://www.youtube.com/watch?v=mcj0EXKswhc"
-                                                      }
-                                                      ]
-              },
-              {
-              "id": "3",
-              "location": {
-              "latitude": "32.823995",
-              "longitude": "34.960996"
-              },
-              "name": "dorin gimpel",
-              "bday": "04.12.1989",
-              "email": "dorin@gmail.com",
-              "songList": [
-                           {
-                           "name": "bubble set 2015",
-                           "artist":"Bubble",
-                           "time": "01:11:24",
-                           "icon": "bubble.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=SVSa22Qkn4M"
-                           },
-                           {
-                           "name": "sipor yashan",
-                           "artist":"omer adaon & liran danino",
-                           "time": "04:02",
-                           "icon": "omer.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=u1glMDHNruQ"
-                           },
-                           {
-                           "name": "rahok mekan",
-                           "artist":"eyal golan",
-                           "time": "06:24",
-                           "icon": "golan.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=TySTS8gntLc"
-                           },
-                           {
-                           "name": "stam",
-                           "artist":"static & ben el",
-                           "time": "02:48",
-                           "icon": "static.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=SOc5ULYfITY"
-                           },
-                           {
-                           "name": "af ehad",
-                           "artist":"eden ben zaken",
-                           "time": "03:13",
-                           "icon": "eden.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=oRYWacngxyI"
-                           },
-                           {
-                           "name": "kol ahyir shelano",
-                           "artist":"eden ben zaken & peer tasi",
-                           "time": "04:39",
-                           "icon": "edenPeer.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=mcj0EXKswhc"
-                           }
-                           ]
-              
-              },
-              {
-              "id": "4",
-              "location": {
-              "latitude": "32.823524",
-              "longitude": "34.960223"
-              },
-              "name": "dorin gimpel",
-              "bday": "04.12.1989",
-              "email": "dorin@gmail.com",
-              "songList": [
-                           {
-                           "name": "bubble set 2015",
-                           "artist":"Bubble",
-                           "time": "01:11:24",
-                           "icon": "bubble.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=SVSa22Qkn4M"
-                           },
-                           {
-                           "name": "sipor yashan",
-                           "artist":"omer adaon & liran danino",
-                           "time": "04:02",
-                           "icon": "omer.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=u1glMDHNruQ"
-                           },
-                           {
-                           "name": "rahok mekan",
-                           "artist":"eyal golan",
-                           "time": "06:24",
-                           "icon": "golan.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=TySTS8gntLc"
-                           },
-                           {
-                           "name": "stam",
-                           "artist":"static & ben el",
-                           "time": "02:48",
-                           "icon": "static.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=SOc5ULYfITY"
-                           },
-                           {
-                           "name": "af ehad",
-                           "artist":"eden ben zaken",
-                           "time": "03:13",
-                           "icon": "eden.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=oRYWacngxyI"
-                           },
-                           {
-                           "name": "kol ahyir shelano",
-                           "artist":"eden ben zaken & peer tasi",
-                           "time": "04:39",
-                           "icon": "edenPeer.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=mcj0EXKswhc"
-                           }
-                           ]
-              
-              },
-              {
-              "id": "5",
-              "location": {
-              "latitude": "32.822907",
-              "longitude": "34.960136"
-              },
-              "name": "dorin gimpel",
-              "bday": "04.12.1989",
-              "email": "dorin@gmail.com",
-              "songList": [
-                           {
-                           "name": "bubble set 2015",
-                           "artist":"Bubble",
-                           "time": "01:11:24",
-                           "icon": "bubble.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=SVSa22Qkn4M"
-                           },
-                           {
-                           "name": "sipor yashan",
-                           "artist":"omer adaon & liran danino",
-                           "time": "04:02",
-                           "icon": "omer.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=u1glMDHNruQ"
-                           },
-                           {
-                           "name": "rahok mekan",
-                           "artist":"eyal golan",
-                           "time": "06:24",
-                           "icon": "golan.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=TySTS8gntLc"
-                           },
-                           {
-                           "name": "stam",
-                           "artist":"static & ben el",
-                           "time": "02:48",
-                           "icon": "static.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=SOc5ULYfITY"
-                           },
-                           {
-                           "name": "af ehad",
-                           "artist":"eden ben zaken",
-                           "time": "03:13",
-                           "icon": "eden.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=oRYWacngxyI"
-                           },
-                           {
-                           "name": "kol ahyir shelano",
-                           "artist":"eden ben zaken & peer tasi",
-                           "time": "04:39",
-                           "icon": "edenPeer.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=mcj0EXKswhc"
-                           }
-                           ]
-              
-              },
-              {
-              "id": "6",
-              "location": {
-              "latitude": "32.822573",
-              "longitude": "34.958957"
-              },
-              "name": "dorin gimpel",
-              "bday": "04.12.1989",
-              "email": "dorin@gmail.com",
-              "songList": [
-                           {
-                           "name": "bubble set 2015",
-                           "artist":"Bubble",
-                           "time": "01:11:24",
-                           "icon": "bubble.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=SVSa22Qkn4M"
-                           },
-                           {
-                           "name": "sipor yashan",
-                           "artist":"omer adaon & liran danino",
-                           "time": "04:02",
-                           "icon": "omer.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=u1glMDHNruQ"
-                           },
-                           {
-                           "name": "rahok mekan",
-                           "artist":"eyal golan",
-                           "time": "06:24",
-                           "icon": "golan.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=TySTS8gntLc"
-                           },
-                           {
-                           "name": "stam",
-                           "artist":"static & ben el",
-                           "time": "02:48",
-                           "icon": "static.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=SOc5ULYfITY"
-                           },
-                           {
-                           "name": "af ehad",
-                           "artist":"eden ben zaken",
-                           "time": "03:13",
-                           "icon": "eden.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=oRYWacngxyI"
-                           },
-                           {
-                           "name": "kol ahyir shelano",
-                           "artist":"eden ben zaken & peer tasi",
-                           "time": "04:39",
-                           "icon": "edenPeer.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=mcj0EXKswhc"
-                           }
-                           ]
-              },
-              {
-              "id": "7",
-              "location": {
-              "latitude": "32.822351",
-              "longitude": "34.961749"
-              },
-              "name": "dorin gal",
-              "bday": "04.12.1989",
-              "email": "dorin@gmail.com",
-              "songList": [
-                           {
-                           "name": "bubble set 2015",
-                           "artist":"Bubble",
-                           "time": "01:11:24",
-                           "icon": "bubble.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=SVSa22Qkn4M"
-                           },
-                           {
-                           "name": "sipor yashan",
-                           "artist":"omer adaon & liran danino",
-                           "time": "04:02",
-                           "icon": "omer.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=u1glMDHNruQ"
-                           },
-                           {
-                           "name": "rahok mekan",
-                           "artist":"eyal golan",
-                           "time": "06:24",
-                           "icon": "golan.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=TySTS8gntLc"
-                           },
-                           {
-                           "name": "stam",
-                           "artist":"static & ben el",
-                           "time": "02:48",
-                           "icon": "static.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=SOc5ULYfITY"
-                           },
-                           {
-                           "name": "af ehad",
-                           "artist":"eden ben zaken",
-                           "time": "03:13",
-                           "icon": "eden.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=oRYWacngxyI"
-                           },
-                           {
-                           "name": "kol ahyir shelano",
-                           "artist":"eden ben zaken & peer tasi",
-                           "time": "04:39",
-                           "icon": "edenPeer.jpg",
-                           "type": "out",
-                           "file": "https://www.youtube.com/watch?v=mcj0EXKswhc"
-                           }
-                           ]
-              },
-              {
-              "id": "7",
-              "location": {
-              "latitude": "32.822351",
-              "longitude": "34.961749"
-              },
-              "name": "tomer",
+              "name": "Tomer balanga",
               "bday": "04.12.1989",
               "email": "balanga@gmail.com",
               "songList": [
@@ -383,7 +21,7 @@
                            {
                            "name": "Bungee Jump",
                            "artist":"Astrix & Captain Hook",
-                           "time": "04:11:",
+                           "time": "04:11",
                            "icon": "astrix.jpg",
                            "type": "out",
                            "file": "https://www.youtube.com/watch?v=SVSa22Qkn4M"
@@ -455,12 +93,12 @@
                            ]
               },
               {
-              "id": "8",
+              "id": "2",
               "location": {
-              "latitude": "32.822351",
-              "longitude": "34.961749"
+              "latitude": "32.824489",
+              "longitude": "34.959406"
               },
-              "name": "Sarah",
+              "name": "Sarah isaacs",
               "bday": "04.12.1989",
               "email": "isaacs@gmail.com",
               "songList": [
@@ -545,15 +183,13 @@
                            "file": "https://www.youtube.com/watch?v=SVSa22Qkn4M"
                            }
                            ]
-              },
-              
-              {
-              "id": "9",
+              },{
+              "id": "3",
               "location": {
-              "latitude": "32.822351",
-              "longitude": "34.961749"
+              "latitude": "32.825075",
+              "longitude": "34.961799"
               },
-              "name": "Roman",
+              "name": "Roman belalov",
               "bday": "04.12.1989",
               "email": "belalov@gmail.com",
               "songList": [
@@ -640,12 +276,12 @@
                            ]
               },
               {
-              "id": "10",
+              "id": "4",
               "location": {
-              "latitude": "32.822351",
-              "longitude": "34.961749"
+              "latitude": "32.826273",
+              "longitude": "34.968772"
               },
-              "name": "Oran",
+              "name": "Oran marer",
               "bday": "04.12.1989",
               "email": "marer@gmail.com",
               "songList": [
@@ -732,12 +368,12 @@
                            ]
               },
               {
-              "id": "11",
+              "id": "5",
               "location": {
-              "latitude": "32.822351",
-              "longitude": "34.961749"
+              "latitude": "32.818878",
+              "longitude": "34.961100"
               },
-              "name": "Nikol",
+              "name": "Nikol covalchuk",
               "bday": "04.12.1989",
               "email": "covalchuk@gmail.comm",
               "songList": [
@@ -824,9 +460,13 @@
                            ]
               },
               {
-              "id": "12",
-              "name": "Daniela",
+              "id": "6",
+              "name": "Daniela kristinchuk",
               "bday": "04.12.1989",
+              "location": {
+              "latitude": "32.825670",
+              "longitude": "34.961550"
+              },
               "email": "kristinchuk@gmail.com",
               "songList": [
                            {
@@ -904,12 +544,12 @@
                            ]
               },
               {
-              "id": "13",
+              "id": "7",
               "location": {
-              "latitude": "32.822351",
-              "longitude": "34.961749"
+              "latitude": "32.813013",
+              "longitude": "34.957445"
               },
-              "name": "Ben",
+              "name": "Ben chazut",
               "bday": "04.12.1989",
               "email": "chazut@gmail.comm",
               "songList": [
@@ -972,7 +612,7 @@
                            {
                            "name": "eretz hadasha",
                            "artist":"shlomo artzi",
-                           "time": "04:11:",
+                           "time": "04:11",
                            "icon": "somatic.jpg",
                            "type": "out",
                            "file": "https://www.youtube.com/watch?v=SVSa22Qkn4M"
@@ -980,7 +620,7 @@
                            {
                            "name": "ose ksamim ve rocknroll",
                            "artist":"guy mezig",
-                           "time": "04:11:",
+                           "time": "04:11",
                            "icon": "somatic.jpg",
                            "type": "out",
                            "file": "https://www.youtube.com/watch?v=SVSa22Qkn4M"
@@ -988,7 +628,7 @@
                            {
                            "name": "ki ahayim kol kah yafim",
                            "artist":"etnix",
-                           "time": "04:11:",
+                           "time": "04:11",
                            "icon": "somatic.jpg",
                            "type": "out",
                            "file": "https://www.youtube.com/watch?v=SVSa22Qkn4M"
@@ -996,9 +636,13 @@
                            ]
               },
               {
-              "id": "14",
-              "name": "Guy",
+              "id": "8",
+              "name": "Guy beckermus",
               "bday": "04.12.1989",
+              "location": {
+              "latitude": "32.822351",
+              "longitude": "34.961749"
+              },
               "email": "beckermus@gmail.com",
               "songList": [
                            {
@@ -1084,12 +728,12 @@
                            ]
               },
               {
-              "id": "15",
+              "id": "9",
               "location": {
-              "latitude": "32.822351",
-              "longitude": "34.961749"
+              "latitude": "32.813013",
+              "longitude": "34.957445"
               },
-              "name": "Yana",
+              "name": "Yana laugin",
               "bday": "04.12.1989",
               "email": "laugin@gmail.com",
               "songList": [
@@ -1160,12 +804,12 @@
                            ]
               },
               {
-              "id": "16",
+              "id": "10",
               "location": {
-              "latitude": "32.822351",
-              "longitude": "34.961749"
+              "latitude": "32.817851",
+              "longitude": "34.962105"
               },
-              "name": "Eliran",
+              "name": "Eliran bob",
               "bday": "04.12.1989",
               "email": "eliran@gmail.com",
               "songList": [

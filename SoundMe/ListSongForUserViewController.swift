@@ -8,49 +8,59 @@
 
 import UIKit
 
-class ListSongForUserViewController: UIViewController {
+class ListSongForUserViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var userName: UILabel!
+    var user:User!
+    @IBOutlet weak var age: UILabel!
+    private let reuseIdentifier = "SongCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "backgroundGeneral")!.draw(in: self.view.bounds)
+        let background = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        self.view.backgroundColor = UIColor(patternImage: background!)
         self.navigationController?.navigationBar.tintColor = UIColor(hexString: "#49EBA5")
-        let image = UIImage(named: "smallLogo")!
+        let image = UIImage(named: "smallogo")!
         let imageView = UIImageView(image: image)
-        
+        userName.text = user.name
+        let fullName = user.bday
+        let fullNameArr = fullName.characters.split{$0 == "."}.map(String.init)
+        let year = Int(fullNameArr[2])
+        age.text = findAge(year: year!)
+        tableView.register(UINib(nibName: "songCell", bundle: nil), forCellReuseIdentifier: "Cell")
         self.navigationItem.titleView = imageView
-        // Do any additional setup after loading the view.
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return user.songList.count
+    }
     
-//    static fileprivate func hexToUIColor(_ hex:String) -> UIColor {
-//        var cString:String = hex.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines).uppercased()
-//        
-//        if (cString.hasPrefix("#")) {
-//            cString = (cString as NSString).substring(from: 1)
-//        }
-//        
-//        if (cString.characters.count != 6) {
-//            return UIColor.gray
-//        }
-//        
-//        let rString = (cString as NSString).substring(to: 2)
-//        let gString = ((cString as NSString).substring(from: 2) as NSString).substring(to: 2)
-//        let bString = ((cString as NSString).substring(from: 4) as NSString).substring(to: 2)
-//        
-//        var r:CUnsignedInt = 0, g:CUnsignedInt = 0, b:CUnsignedInt = 0;
-//        Scanner(string: rString).scanHexInt32(&r)
-//        Scanner(string: gString).scanHexInt32(&g)
-//        Scanner(string: bString).scanHexInt32(&b)
-//        
-//        
-//        return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: CGFloat(1))
-//    }
-//    
-
+    func findAge(year:Int)->String{
+        let age = 2016 - year
+        return String(age)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! songTableViewTableViewCell
+        cell.firstNameLabel.text = user.songList[indexPath.row].name
+        cell.artist.text = user.songList[indexPath.row].artist
+      
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
   
 }
 

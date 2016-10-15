@@ -17,7 +17,6 @@
 		04AE4C6C1D89FE1700A0C1FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AE4C6B1D89FE1700A0C1FE /* LaunchScreen.storyboard */; };
 		04AE4C6F1D89FFC000A0C1FE /* LoginsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE4C6E1D89FFC000A0C1FE /* LoginsViewController.swift */; };
 		04BAE2471DA94C550014DA02 /* SongManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BAE2461DA94C550014DA02 /* SongManager.swift */; };
-		04BAE24A1DAAE01E0014DA02 /* songList.json in Resources */ = {isa = PBXBuildFile; fileRef = 04BAE2491DAAE01E0014DA02 /* songList.json */; };
 		04DE8C551D8C2F07009112CA /* ViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE8C541D8C2F07009112CA /* ViewControllerUtils.swift */; };
 		330D9B711D9FA1F4009281B3 /* sessionkey.json in Resources */ = {isa = PBXBuildFile; fileRef = 330D9B701D9FA1F4009281B3 /* sessionkey.json */; };
 		330D9B731D9FA464009281B3 /* Acount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D9B721D9FA464009281B3 /* Acount.swift */; };
@@ -71,6 +70,8 @@
 		33CF861F1C8AE30A0037C701 /* SoundMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CF861E1C8AE30A0037C701 /* SoundMeTests.swift */; };
 		33CF862A1C8AE30A0037C701 /* SoundMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CF86291C8AE30A0037C701 /* SoundMeUITests.swift */; };
 		33CF86381C8AE4450037C701 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CF86371C8AE4450037C701 /* API.swift */; };
+		33E09D781DB0E1B700CAF3F2 /* songTableViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E09D771DB0E1B700CAF3F2 /* songTableViewTableViewCell.swift */; };
+		33E09D7A1DB0E63C00CAF3F2 /* songCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33E09D791DB0E63C00CAF3F2 /* songCell.xib */; };
 		33F80B0A1D8D6FCC009DFD75 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F80B091D8D6FCC009DFD75 /* MeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -103,7 +104,6 @@
 		04AE4C6B1D89FE1700A0C1FE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04AE4C6E1D89FFC000A0C1FE /* LoginsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginsViewController.swift; sourceTree = "<group>"; };
 		04BAE2461DA94C550014DA02 /* SongManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongManager.swift; sourceTree = "<group>"; };
-		04BAE2491DAAE01E0014DA02 /* songList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = songList.json; sourceTree = "<group>"; };
 		04DE8C541D8C2F07009112CA /* ViewControllerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUtils.swift; sourceTree = "<group>"; };
 		330D9B701D9FA1F4009281B3 /* sessionkey.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sessionkey.json; sourceTree = "<group>"; };
 		330D9B721D9FA464009281B3 /* Acount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acount.swift; sourceTree = "<group>"; };
@@ -163,6 +163,8 @@
 		33CF86291C8AE30A0037C701 /* SoundMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundMeUITests.swift; sourceTree = "<group>"; };
 		33CF862B1C8AE30A0037C701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33CF86371C8AE4450037C701 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		33E09D771DB0E1B700CAF3F2 /* songTableViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = songTableViewTableViewCell.swift; sourceTree = "<group>"; };
+		33E09D791DB0E63C00CAF3F2 /* songCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = songCell.xib; sourceTree = "<group>"; };
 		33F80B091D8D6FCC009DFD75 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -257,6 +259,7 @@
 				333C89D51D8D6AAA00BD6446 /* LoginWithSoundmeViewController.swift */,
 				330D9B7E1D9FED6C009281B3 /* FeedViewController.swift */,
 				330D9B801D9FEF2A009281B3 /* PlayerViewController.swift */,
+				33E09D771DB0E1B700CAF3F2 /* songTableViewTableViewCell.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				04AE4C691D89FD7F00A0C1FE /* Main.storyboard */,
 				330D9B831DA039C4009281B3 /* CustomView.xib */,
 				04AE4C6B1D89FE1700A0C1FE /* LaunchScreen.storyboard */,
+				33E09D791DB0E63C00CAF3F2 /* songCell.xib */,
 			);
 			name = StoryBoard;
 			sourceTree = "<group>";
@@ -352,7 +356,6 @@
 				330D9B701D9FA1F4009281B3 /* sessionkey.json */,
 				330D9B781D9FB261009281B3 /* users.json */,
 				330D9B7C1D9FE67F009281B3 /* loginUser.json */,
-				04BAE2491DAAE01E0014DA02 /* songList.json */,
 				04DE8C531D8C2E44009112CA /* Utilitis */,
 				04AE4C711D89FFF000A0C1FE /* StoryBoard */,
 				04AE4C701D89FFCA00A0C1FE /* ViewController */,
@@ -503,6 +506,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33E09D7A1DB0E63C00CAF3F2 /* songCell.xib in Resources */,
 				330D9B791D9FB261009281B3 /* users.json in Resources */,
 				04AE4C6C1D89FE1700A0C1FE /* LaunchScreen.storyboard in Resources */,
 				330D9B7D1D9FE67F009281B3 /* loginUser.json in Resources */,
@@ -511,7 +515,6 @@
 				330D9B851DA039C4009281B3 /* CustomView.xib in Resources */,
 				33CF86111C8AE30A0037C701 /* Assets.xcassets in Resources */,
 				333C89C31D8D677D00BD6446 /* GoogleMaps.bundle in Resources */,
-				04BAE24A1DAAE01E0014DA02 /* songList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +543,7 @@
 				33F80B0A1D8D6FCC009DFD75 /* MeViewController.swift in Sources */,
 				33115FA51C8AEE2600D73A9A /* UserManger.swift in Sources */,
 				330D9B841DA039C4009281B3 /* CustomView.swift in Sources */,
+				33E09D781DB0E1B700CAF3F2 /* songTableViewTableViewCell.swift in Sources */,
 				04AE4C6F1D89FFC000A0C1FE /* LoginsViewController.swift in Sources */,
 				330D9B7F1D9FED6C009281B3 /* FeedViewController.swift in Sources */,
 				33CF86381C8AE4450037C701 /* API.swift in Sources */,
