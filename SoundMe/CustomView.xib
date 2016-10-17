@@ -8,11 +8,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="SoundMe" customModuleProvider="target">
             <connections>
+                <outlet property="addProfile" destination="zuV-Po-mEb" id="KsE-dH-UBp"/>
+                <outlet property="list_song" destination="t7t-TF-CdK" id="X0b-oh-G4q"/>
                 <outlet property="name" destination="qmG-wg-ZF3" id="9py-zf-3eC"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view userInteractionEnabled="NO" contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="232" height="124"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>

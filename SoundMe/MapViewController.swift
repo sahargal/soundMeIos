@@ -77,12 +77,18 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewDe
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
         didMoveToNext()
     }
+    
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
         let infoWindow = CustomView(frame: CGRect(x: 0, y: 0, width: 232, height: 124))
-        infoWindow.isUserInteractionEnabled = false
-        let tapGesture = UILongPressGestureRecognizer(target: self, action: #selector(MapViewController.didMoveToNext))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(MapViewController.didMoveToNext))
+        infoWindow.list_song.addGestureRecognizer(tapGesture)
         tapGesture.numberOfTapsRequired = 1
+        
+        let tapGestureAdd = UITapGestureRecognizer(target: self, action: #selector(MapViewController.addUser))
+        infoWindow.addProfile.addGestureRecognizer(tapGestureAdd)
+        tapGestureAdd.numberOfTapsRequired = 1
         infoWindow.name.text = marker.title
+        
         id = Int(marker.snippet!)!
         return infoWindow
     }
@@ -91,6 +97,9 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewDe
     
     var userToList:User!
 
+    func addUser(){
+        
+    }
     
     func didMoveToNext(){
         for user in users{

@@ -11,6 +11,10 @@ import UIKit
 @IBDesignable class CustomView: UIView {
 
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var list_song: UIImageView!
+    
+    @IBOutlet weak var addProfile: UIImageView!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadViewFromNib ()
