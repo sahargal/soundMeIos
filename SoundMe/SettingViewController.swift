@@ -9,50 +9,51 @@
 import Foundation
 
 
-class SettingViewController: UIViewController,UITextFieldDelegate {
+class SettingViewController: UIViewController,UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource {
 
-
- 
+    @IBOutlet weak var changeRadiusLabel: UILabel!
     @IBOutlet weak var logOutLabel: UILabel!
-    @IBOutlet weak var changeRadiusTextField: UITextField!
-    
-    
-  
+    @IBOutlet weak var optionRadiusPicker: UIPickerView!
+    let radiusArray = ["1 Km","2 Km","3 Km","4 Km","5 Km","6 Km","7 Km","8 Km","9 Km","10 Km"]
     
     override func viewDidLoad() {
-        changeRadiusTextField.delegate = self
+        optionRadiusPicker.isHidden = true
+        optionRadiusPicker.delegate = self
+        optionRadiusPicker.dataSource = self
+        optionRadiusPicker.tag = 1
         UIGraphicsBeginImageContext(self.view.frame.size)
         UIImage(named: "backgroundGeneral")!.draw(in: self.view.bounds)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         self.view.backgroundColor = UIColor(patternImage: image!)
         setDeafultRadius()
-        if changeRadiusTextField.text != " " {
-            changeRadiusTextField.addTarget(self, action: #selector(SettingViewController.changeRadiusAcion), for: UIControlEvents.editingChanged)
-        }
-        
-
-        
+       
+        let tapGestureEditRadius = UITapGestureRecognizer(target: self, action: #selector(SettingViewController.editRadius))
+        tapGestureEditRadius.numberOfTapsRequired = 1
+        self.changeRadiusLabel.addGestureRecognizer(tapGestureEditRadius)
+       
         let tapGestureLogOut = UITapGestureRecognizer(target: self, action: #selector(SettingViewController.actionLogOut))
         tapGestureLogOut.numberOfTapsRequired = 1
         self.logOutLabel.addGestureRecognizer(tapGestureLogOut)
         
-    
     }
     
     
 
     
     private func setDeafultRadius(){
-        
         let deafultRadius = 2
-        changeRadiusTextField.text = String(deafultRadius)
+        changeRadiusLabel.text = String(deafultRadius)
         changeRadiusAcion()
     }
     
+      func editRadius(){
+        optionRadiusPicker.isHidden = false
+    }
     
-    func changeRadiusAcion(){
-        let radius = changeRadiusTextField.text!
+    
+    @objc private func changeRadiusAcion(){
+        let radius = changeRadiusLabel.text!
         let sessionKey = "101"
             UserManger.Instance.changeRadius(sessionKey: sessionKey, radius: radius, callback:{(success,result)->() in
                 if success
@@ -67,11 +68,38 @@ class SettingViewController: UIViewController,UITextFieldDelegate {
                 }
             })
         
-        
-        
     }
     
-    func actionLogOut() {
+    
+    internal func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    internal func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return radiusArray.count
+    }
+    
+    internal func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int)->String?  {
+       return radiusArray[row]
+    }
+    
+      func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        changeRadiusLabel.text = String(row+1)
+        optionRadiusPicker.isHidden = true
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let titleRadius = radiusArray[row]
+        let attributedString = NSAttributedString(string: titleRadius, attributes: [NSForegroundColorAttributeName : UIColor.white])
+        return attributedString
+    }
+    
+    
+    
+    
+    
+    
+   @objc private func actionLogOut() {
         let sessionKey = "102"
         print("success")
         let msgAlert = UIAlertController(title: "Are you sure you want to log out?", message: "", preferredStyle: UIAlertControllerStyle.alert)
@@ -124,8 +152,8 @@ class SettingViewController: UIViewController,UITextFieldDelegate {
         func textFieldShouldReturn(_ textField: UITextField) -> Bool
         {   //delegate method
             textField.resignFirstResponder()
-            if (changeRadiusTextField.text?.isEmpty)! {
-               changeRadiusTextField.text = "2"
+            if (changeRadiusLabel.text?.isEmpty)! {
+               changeRadiusLabel.text = "2"
                 changeRadiusAcion()
             }
             else
