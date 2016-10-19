@@ -7,16 +7,26 @@
 //
 
 import UIKit
+import MediaPlayer
+import AVKit
 
-class ListSongForUserViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ListSongForUserViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,AVAudioPlayerDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var userName: UILabel!
     var user:User!
     @IBOutlet weak var age: UILabel!
     private let reuseIdentifier = "SongCell"
-
+    var songList:[Song] = [Song]()
+    var nowPlaySong:Song!
+    @IBOutlet weak var nowPlayArtist: UILabel!
+    @IBOutlet weak var nowPlaySongName: UILabel!
+   // var player:MPMusicPlayerController!
+    var player:AVAudioPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.backgroundColor = UIColor.clear
+        tableView.contentInset = UIEdgeInsetsMake(0,0,0,0);
         UIGraphicsBeginImageContext(self.view.frame.size)
         UIImage(named: "backgroundGeneral")!.draw(in: self.view.bounds)
         let background = UIGraphicsGetImageFromCurrentImageContext()
@@ -32,17 +42,55 @@ class ListSongForUserViewController: UIViewController,UITableViewDelegate,UITabl
         age.text = findAge(year: year!)
         tableView.register(UINib(nibName: "songCell", bundle: nil), forCellReuseIdentifier: "Cell")
         self.navigationItem.titleView = imageView
+        getSongList()
+        nowPlayArtist.text = nowPlaySong.artist
+        nowPlaySongName.text = nowPlaySong.name
+       // player = MPMusicPlayerController.systemMusicPlayer()
+    }
+
+    func downloadFileFromURL(url:NSURL){
+        var downloadTask:URLSessionDownloadTask
+        downloadTask = URLSession.shared.downloadTask(with: url as URL, completionHandler: { (URL, response, error) -> Void in
+            
+            self.play(url: URL!)
+            
+        })
+        
+        downloadTask.resume()
+        
     }
     
-    
-
+    func play(url:URL) {
+        print("playing \(url)")
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            guard let player = player else { return }
+         
+            player.prepareToPlay()
+            player.play()
+        } catch let error as Error {
+            print(error.localizedDescription)
+        }
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return user.songList.count
+        return user.songList.count-1
+    }
+    
+    func getSongList(){
+        for (index,song) in user.songList.enumerated(){
+            if index == 0{
+                nowPlaySong = song
+            }else{
+                songList.append(song)
+            }
+        }
     }
     
     func findAge(year:Int)->String{
@@ -52,14 +100,19 @@ class ListSongForUserViewController: UIViewController,UITableViewDelegate,UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
      let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! songTableViewTableViewCell
-        cell.firstNameLabel.text = user.songList[indexPath.row].name
-        cell.artist.text = user.songList[indexPath.row].artist
+        cell.backgroundColor = UIColor.clear
+
+        cell.firstNameLabel.text = songList[indexPath.row].name
+        cell.artist.text = songList[indexPath.row].artist
       
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let urlstring = "https://ia601409.us.archive.org/20/items/UsaNationalAnthemFromSilo/silosinging-us-anthem_64kb.mp3"
+        let url = NSURL(string: urlstring)
+        print("the url = \(url!)")
+        downloadFileFromURL(url: url!)
     }
   
 }
