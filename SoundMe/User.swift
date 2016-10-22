@@ -12,7 +12,17 @@ import UIKit
 
 open class User {
     
-    init(id:Int,name:String,email:String,icon:UIImage,bday:String,location:Location,songList:[Song]){
+    init(){
+        _id = -1
+        _name = ""
+        _email = ""
+        _icon = UIImage(named: "")!
+        _bday = ""
+        _location = Location(json: ["":""])
+        _songList = [SongOut]()
+    }
+    
+    init(id:Int,name:String,email:String,icon:UIImage,bday:String,location:Location,songList:[SongOut]){
         _id = id
         _name = name
         _email = email
@@ -25,14 +35,14 @@ open class User {
     init(json:NSDictionary) {
         _id = Int(json["id"] as! String)!
         _name = json["name"] as! String
-        _icon = UIImage(named: "me")!
+        _icon = UIImage(named: json["image"] as! String)!
         _location = Location(json: json["location"] as! NSDictionary)
         _email = json["email"] as! String
         _bday = json["bday"] as! String
         let songsList = json["songList"] as! NSArray
-        var songs:[Song] = [Song]()
+        var songs:[SongOut] = [SongOut]()
         for song in songsList{
-            let newSong = Song(json: song as! NSDictionary)
+            let newSong = SongOut(json: song as! NSDictionary)
             songs.append(newSong)
         }
         _songList = songs  //until the factory will create
@@ -102,8 +112,8 @@ open class User {
         }
     }
     
-    private var _songList: [Song]
-    private (set) var songList:[Song] {
+    private var _songList: [SongOut]
+    private (set) var songList:[SongOut] {
         get {
                 return _songList
         }

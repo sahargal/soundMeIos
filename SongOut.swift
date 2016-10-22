@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class SoungOut:Song{
+public class SongOut:Song{
     
     
     
@@ -24,6 +24,11 @@ public class SoungOut:Song{
         
     }
     
+    
+    override init(json: NSDictionary) {
+        _file = json["file"] as! String
+        super.init(json: json)
+    }
     
     
     private var _file: String!

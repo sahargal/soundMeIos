@@ -9,6 +9,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="SoundMe" customModuleProvider="target">
             <connections>
                 <outlet property="addProfile" destination="zuV-Po-mEb" id="KsE-dH-UBp"/>
+                <outlet property="iconUser" destination="qiL-ic-P8i" id="5DY-c4-vlZ"/>
                 <outlet property="list_song" destination="t7t-TF-CdK" id="X0b-oh-G4q"/>
                 <outlet property="name" destination="qmG-wg-ZF3" id="9py-zf-3eC"/>
             </connections>
@@ -30,7 +31,7 @@
                     <frame key="frameInset" minX="16" minY="11" width="60" height="60"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="iconUser" translatesAutoresizingMaskIntoConstraints="NO" id="qiL-ic-P8i">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="iconUser" translatesAutoresizingMaskIntoConstraints="NO" id="qiL-ic-P8i">
                     <frame key="frameInset" minX="85" minY="11" width="60" height="60"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>

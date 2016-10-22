@@ -8,6 +8,7 @@
               },
               "name": "Tomer balanga",
               "bday": "04.12.1989",
+              "image": "tomar",
               "email": "balanga@gmail.com",
               "songList": [
                            {
@@ -100,6 +101,7 @@
               },
               "name": "Sarah isaacs",
               "bday": "04.12.1989",
+              "image": "sarah",
               "email": "isaacs@gmail.com",
               "songList": [
                            {
@@ -191,6 +193,7 @@
               },
               "name": "Roman belalov",
               "bday": "04.12.1989",
+              "image": "roman",
               "email": "belalov@gmail.com",
               "songList": [
                            {
@@ -283,6 +286,8 @@
               },
               "name": "Oran marer",
               "bday": "04.12.1989",
+              "image": "oran",
+
               "email": "marer@gmail.com",
               "songList": [
                            {
@@ -374,6 +379,8 @@
               "longitude": "34.961100"
               },
               "name": "Nikol covalchuk",
+              "image": "nikol",
+
               "bday": "04.12.1989",
               "email": "covalchuk@gmail.comm",
               "songList": [
@@ -467,6 +474,8 @@
               "latitude": "32.825670",
               "longitude": "34.961550"
               },
+              "image": "daniela",
+
               "email": "kristinchuk@gmail.com",
               "songList": [
                            {
@@ -551,6 +560,8 @@
               },
               "name": "Ben chazut",
               "bday": "04.12.1989",
+              "image": "ben",
+
               "email": "chazut@gmail.comm",
               "songList": [
                            {
@@ -644,6 +655,8 @@
               "longitude": "34.961749"
               },
               "email": "beckermus@gmail.com",
+              "image": "guy",
+
               "songList": [
                            {
                            "name": "layla layla",
@@ -735,6 +748,7 @@
               },
               "name": "Yana laugin",
               "bday": "04.12.1989",
+              "image": "yana",
               "email": "laugin@gmail.com",
               "songList": [
                            {
@@ -810,6 +824,7 @@
               "longitude": "34.962105"
               },
               "name": "Eliran bob",
+              "image": "eliran",
               "bday": "04.12.1989",
               "email": "eliran@gmail.com",
               "songList": [
@@ -902,6 +917,8 @@
               "longitude": "35.012840"
               },
               "name": "Or-tal Braha",
+              "image": "dror",
+
               "bday": "04.12.1989",
               "email": "Rotall8@gmail.com",
               "songList": [
@@ -995,6 +1012,8 @@
               },
               "name": "Omri Braha",
               "bday": "04.12.1989",
+              "image": "dror",
+
               "email": "OmriBraha@gmail.com",
               "songList": [
                            {
@@ -1003,7 +1022,7 @@
                            "time": "04:37",
                            "icon": "darwish.jpg",
                            "type": "out",
-                           "file": "https://www.youtube.com/watch?v=SVSa22Qkn4M"
+                           "file": "https://ia601504.us.archive.org/22/items/BURYTOMORROWRoyalBloodOFFICIALVIDEO/BURY%20TOMORROW%20-%20Royal%20Blood%20(OFFICIAL%20VIDEO).mp3"
                            },
                            {
                            "name": "Suit and Tie",
@@ -1011,7 +1030,7 @@
                            "time": "04:39",
                            "icon": "astrix.jpg",
                            "type": "out",
-                           "file": "https://www.youtube.com/watch?v=SVSa22Qkn4M"
+                           "file": "https://ia801509.us.archive.org/0/items/JustinTimberlakeSuitTieOfficialFt.JAYZ/Justin%20Timberlake%20-%20Suit%20&%20Tie%20(Official)%20ft.%20JAY%20Z.mp3"
                            },
                            {
                            "name": "PILLOWTALK ",
@@ -1019,7 +1038,7 @@
                            "time": "04:11",
                            "icon": "astrix.jpg",
                            "type": "out",
-                           "file": "https://www.youtube.com/watch?v=SVSa22Qkn4M"
+                           "file": "https://ia601501.us.archive.org/15/items/ZAYNPILLOWTALK/ZAYN%20-%20PILLOWTALK.mp3"
                            },
                            {
                            "name": "talk",
@@ -1027,15 +1046,15 @@
                            "time": "04:42",
                            "icon": "loud.jpg",
                            "type": "out",
-                           "file": "https://www.youtube.com/watch?v=SVSa22Qkn4M"
+                           "file": "https://ia801500.us.archive.org/24/items/ColdplayTalk/Coldplay%20-%20Talk.mp3"
                            },
                            {
                            "name": "Lost",
-                           "artist":"oldplay",
+                           "artist":"Coldplay",
                            "time": "02:58",
                            "icon": "somatic.jpg",
                            "type": "out",
-                           "file": "https://www.youtube.com/watch?v=SVSa22Qkn4M"
+                           "file": "https://ia601503.us.archive.org/13/items/ColdplayLost_201610/Coldplay%20-%20Lost!.mp3"
                            },
                            {
                            "name": "Violet hill",
@@ -1043,7 +1062,7 @@
                            "time": "03:12",
                            "icon": "somatic.jpg",
                            "type": "out",
-                           "file": "https://www.youtube.com/watch?v=SVSa22Qkn4M"
+                           "file": "https://ia601502.us.archive.org/30/items/ColdplayVioletHill/Coldplay%20-%20Violet%20Hill.mp3"
                            },
                            {
                            "name": "I Got You",
@@ -1051,7 +1070,7 @@
                            "time": "03:23",
                            "icon": "somatic.jpg",
                            "type": "out",
-                           "file": "https://www.youtube.com/watch?v=SVSa22Qkn4M"
+                           "file": "https://ia601506.us.archive.org/27/items/DukeDumontIGotUFt.JaxJones/Duke%20Dumont%20-%20I%20Got%20U%20ft.%20Jax%20Jones.mp3"
                            },
                            {
                            "name": "Ocean Drive",
@@ -1059,7 +1078,7 @@
                            "time": "03:28",
                            "icon": "somatic.jpg",
                            "type": "out",
-                           "file": "https://www.youtube.com/watch?v=SVSa22Qkn4M"
+                           "file": "https://ia601509.us.archive.org/7/items/DukeDumontOceanDrive_201610/Duke%20Dumont%20-%20Ocean%20Drive.mp3"
                            },
                            {
                            "name": "Midnight City",
@@ -1067,7 +1086,7 @@
                            "time": "03:48",
                            "icon": "somatic.jpg",
                            "type": "out",
-                           "file": "https://www.youtube.com/watch?v=SVSa22Qkn4M"
+                           "file": "https://ia601503.us.archive.org/15/items/M83MidnightCityOfficialVideo/M83%20'Midnight%20City'%20Official%20video.mp3"
                            },
                            {
                            "name": "No Lungs to Breath",
@@ -1075,7 +1094,7 @@
                            "time": "04:45",
                            "icon": "somatic.jpg",
                            "type": "out",
-                           "file": "https://www.youtube.com/watch?v=SVSa22Qkn4M"
+                           "file": "https://ia601505.us.archive.org/32/items/AsILayDyingNoLungsToBreatheHQ/As%20I%20Lay%20Dying%20-%20No%20Lungs%20to%20Breathe%20(HQ).mp3"
                            }
                            ]
               },
@@ -1086,6 +1105,8 @@
               "longitude": "35.084730"
               },
               "name": "Tal Weiman",
+              "image": "dror",
+
               "bday": "04.12.1989",
               "email": "Talwe@gmail.com",
               "songList": [
@@ -1179,6 +1200,8 @@
               },
               "name": "Or Ohana",
               "bday": "04.12.1989",
+              "image": "dror",
+
               "email": "OrOhana1994@gmail.com",
               "songList": [
                            {
@@ -1270,6 +1293,8 @@
               "longitude": "34.815885"
               },
               "name": "saf ben Shmuel",
+              "image": "dror",
+
               "bday": "04.12.1989",
               "email": "asafor232@gmail.com",
               "songList": [
@@ -1363,6 +1388,8 @@
               },
               "name": "Roei Weiman",
               "bday": "04.12.1989",
+              "image": "dror",
+
               "email": "RoeiW1996@gmail.com",
               "songList": [
                            {
@@ -1455,6 +1482,8 @@
               },
               "name": "Valeria Tal",
               "bday": "04.12.1989",
+              "image": "dror",
+
               "email": "TeamT1994@gmail.com",
               "songList": [
                            {
@@ -1547,6 +1576,8 @@
               },
               "name": "Tal Ben Yehuda",
               "bday": "04.12.1989",
+              "image": "dror",
+
               "email": "TalBY2@gmail.com",
               "songList": [
                            {
@@ -1639,6 +1670,8 @@
               },
               "name": "Ron Bon",
               "bday": "04.12.1989",
+              "image": "dror",
+
               "email": "Ron1212@gmail.com",
               "songList": [
                            {
@@ -1731,6 +1764,8 @@
               },
               "name": "Yossi Bracha",
               "bday": "04.12.1989",
+              "image": "dror",
+
               "email": "YossiBracha@gmail.com",
               "songList": [
                            {

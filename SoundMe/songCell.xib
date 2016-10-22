@@ -16,27 +16,32 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HL6-zg-i4B">
-                        <frame key="frameInset" minX="130" minY="18" width="100" height="21"/>
+                        <frame key="frameInset" minX="114" minY="3" width="253" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconAddSongToMyPlaylist" translatesAutoresizingMaskIntoConstraints="NO" id="zJl-ox-RKO">
-                        <frame key="frameInset" minX="8" minY="3" width="50" height="50"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconNoAlbumPicture" translatesAutoresizingMaskIntoConstraints="NO" id="BCg-1a-cQb">
-                        <frame key="frameInset" minX="66" minY="3" width="50" height="50"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="songName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8l3-f8-wiR">
-                        <frame key="frameInset" minX="238" minY="17" width="129" height="21"/>
+                        <frame key="frameInset" minX="114" minY="22" width="253" height="27"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconAddSongToMyPlaylist" translatesAutoresizingMaskIntoConstraints="NO" id="zJl-ox-RKO">
+                        <frame key="frameInset" minX="8" minY="9" width="40" height="40"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Oy-pw-ZUL">
+                        <frame key="frameInset" minX="56" minY="9" width="40" height="40"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" image="iconPlay"/>
+                        <state key="selected" image="iconPause"/>
+                        <connections>
+                            <action selector="playClick:" destination="Gkd-sh-xaj" eventType="touchUpInside" id="1SX-uR-RwR"/>
+                        </connections>
+                    </button>
                 </subviews>
             </tableViewCellContentView>
             <connections>
@@ -48,6 +53,7 @@
     </objects>
     <resources>
         <image name="iconAddSongToMyPlaylist" width="40" height="40"/>
-        <image name="iconNoAlbumPicture" width="40" height="40"/>
+        <image name="iconPause" width="60" height="60"/>
+        <image name="iconPlay" width="60" height="60"/>
     </resources>
 </document>

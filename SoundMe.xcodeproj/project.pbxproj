@@ -72,6 +72,7 @@
 		33CF86381C8AE4450037C701 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CF86371C8AE4450037C701 /* API.swift */; };
 		33E09D781DB0E1B700CAF3F2 /* songTableViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E09D771DB0E1B700CAF3F2 /* songTableViewTableViewCell.swift */; };
 		33E09D7A1DB0E63C00CAF3F2 /* songCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33E09D791DB0E63C00CAF3F2 /* songCell.xib */; };
+		33E09D7C1DB9438E00CAF3F2 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E09D7B1DB9438E00CAF3F2 /* Downloader.swift */; };
 		33F80B0A1D8D6FCC009DFD75 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F80B091D8D6FCC009DFD75 /* MeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -165,6 +166,7 @@
 		33CF86371C8AE4450037C701 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		33E09D771DB0E1B700CAF3F2 /* songTableViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = songTableViewTableViewCell.swift; sourceTree = "<group>"; };
 		33E09D791DB0E63C00CAF3F2 /* songCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = songCell.xib; sourceTree = "<group>"; };
+		33E09D7B1DB9438E00CAF3F2 /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		33F80B091D8D6FCC009DFD75 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -394,6 +396,7 @@
 				04AE4C651D88AFAE00A0C1FE /* WebServices.swift */,
 				04AE4C671D88B03B00A0C1FE /* ServerResponse.swift */,
 				33CF86371C8AE4450037C701 /* API.swift */,
+				33E09D7B1DB9438E00CAF3F2 /* Downloader.swift */,
 			);
 			name = Server;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				330D9B871DA7F630009281B3 /* Song.swift in Sources */,
 				04AE4C661D88AFAE00A0C1FE /* WebServices.swift in Sources */,
 				330D9B731D9FA464009281B3 /* Acount.swift in Sources */,
+				33E09D7C1DB9438E00CAF3F2 /* Downloader.swift in Sources */,
 				333C89DC1D8D6BFB00BD6446 /* ListSongForUserViewController.swift in Sources */,
 				04AE4C641D8829E200A0C1FE /* Location.swift in Sources */,
 				330D9B771D9FAFCA009281B3 /* SessionManager.swift in Sources */,

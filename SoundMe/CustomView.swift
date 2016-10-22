@@ -15,10 +15,14 @@ import UIKit
     
     @IBOutlet weak var addProfile: UIImageView!
     
+    @IBOutlet weak var iconUser: UIImageView!
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadViewFromNib ()
-        
+        self.iconUser.layer.cornerRadius = self.iconUser.frame.size.width / 2;
+        self.iconUser.clipsToBounds = true;
+        self.iconUser.layer.borderWidth = 3.0
+        self.iconUser.layer.borderColor = UIColor.white.cgColor
     }
 
 

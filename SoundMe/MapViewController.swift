@@ -40,7 +40,7 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewDe
         let longitude = locationManager.location?.coordinate.longitude
         let latitude = locationManager.location?.coordinate.latitude
         print(latitude,longitude)
-        let camera = GMSCameraPosition.camera(withLatitude: latitude!, longitude: longitude!, zoom: 18)
+        let camera = GMSCameraPosition.camera(withLatitude: 32.825075, longitude: 34.961799, zoom: 18)
         
         let mapView = GMSMapView.map(withFrame: CGRect.infinite, camera: camera)
         mapView.delegate = self
@@ -79,6 +79,8 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewDe
     }
     
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+        id = Int(marker.snippet!)!
+        
         let infoWindow = CustomView(frame: CGRect(x: 0, y: 0, width: 232, height: 124))
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(MapViewController.didMoveToNext))
         infoWindow.list_song.addGestureRecognizer(tapGesture)
@@ -88,12 +90,21 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewDe
         infoWindow.addProfile.addGestureRecognizer(tapGestureAdd)
         tapGestureAdd.numberOfTapsRequired = 1
         infoWindow.name.text = marker.title
-        
-        id = Int(marker.snippet!)!
+        infoWindow.iconUser.image = findUser(id: id).icon
+      //  id = Int(marker.snippet!)!
         return infoWindow
     }
     
-    
+    func findUser(id:Int)->User{
+        for user in users{
+            if user.id == id{
+                return user
+            }else{
+                continue
+            }
+        }
+        return User()
+    }
     
     var userToList:User!
 

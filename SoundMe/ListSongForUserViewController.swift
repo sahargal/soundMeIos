@@ -11,17 +11,21 @@ import MediaPlayer
 import AVKit
 
 class ListSongForUserViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,AVAudioPlayerDelegate {
+    @IBOutlet weak var pic: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var userName: UILabel!
     var user:User!
     @IBOutlet weak var age: UILabel!
     private let reuseIdentifier = "SongCell"
-    var songList:[Song] = [Song]()
-    var nowPlaySong:Song!
+    var songList:[SongOut] = [SongOut]()
+    var nowPlaySong:SongOut!
     @IBOutlet weak var nowPlayArtist: UILabel!
     @IBOutlet weak var nowPlaySongName: UILabel!
    // var player:MPMusicPlayerController!
-    var player:AVAudioPlayer!
+    var player:AVPlayer!
+    var isInstall:Bool = false
+    var urlIndex:String = ""
+    var isEdit: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,35 +49,66 @@ class ListSongForUserViewController: UIViewController,UITableViewDelegate,UITabl
         getSongList()
         nowPlayArtist.text = nowPlaySong.artist
         nowPlaySongName.text = nowPlaySong.name
+        self.pic.image = user.icon
+        self.pic.layer.cornerRadius = self.pic.frame.size.width / 2;
+        self.pic.clipsToBounds = true;
+        self.pic.layer.borderWidth = 3.0
+        self.pic.layer.borderColor = UIColor.white.cgColor
+        player = AVPlayer()
+        self.automaticallyAdjustsScrollViewInsets = false
+
        // player = MPMusicPlayerController.systemMusicPlayer()
     }
 
+    @IBAction func playButton(_ sender: UIButton) {
+        if sender.isSelected{
+            sender.isSelected = false
+            player.pause()
+        }else{
+            sender.isSelected = true
+            if isInstall{
+                player.play()
+            }else{
+                playSound(urlTo: nowPlaySong.file)
+            }
+
+        }
+    }
     func downloadFileFromURL(url:NSURL){
         var downloadTask:URLSessionDownloadTask
         downloadTask = URLSession.shared.downloadTask(with: url as URL, completionHandler: { (URL, response, error) -> Void in
-            
-            self.play(url: URL!)
-            
+           // self.play(url: URL!)
+
+
         })
         
         downloadTask.resume()
         
     }
     
-    func play(url:URL) {
-        print("playing \(url)")
+    func playSound(urlTo:String) {
         
-        do {
-            player = try AVAudioPlayer(contentsOf: url)
-            guard let player = player else { return }
-         
-            player.prepareToPlay()
-            player.play()
-        } catch let error as Error {
-            print(error.localizedDescription)
-        }
-        
+        let playerItem = AVPlayerItem( url:NSURL( string:urlTo ) as! URL )
+        player = AVPlayer(playerItem:playerItem)
+        player.rate = 1.0;
+        player.play()
+        isInstall = true
     }
+    
+//    func play(url:URL) {
+//        print("playing \(url)")
+//        
+//        do {
+//            player = try AVAudioPlayer(contentsOf: url)
+//            guard let player = player else { return }
+//         
+//            player.prepareToPlay()
+//            player.play()
+//        } catch let error as Error {
+//            print(error.localizedDescription)
+//        }
+//        
+//    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
@@ -104,15 +139,20 @@ class ListSongForUserViewController: UIViewController,UITableViewDelegate,UITabl
 
         cell.firstNameLabel.text = songList[indexPath.row].name
         cell.artist.text = songList[indexPath.row].artist
-      
+        cell.setUrl(url:songList[indexPath.row].file)
+//        cell.playButtonSong.addTarget(self, action: #selector(ListSongForUserViewController.setPlay), for: UIControlEvents.touchUpInside)
+//        isEdit = cell.playButtonSong.isSelected
+//        urlIndex = songList[indexPath.row].file
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let urlstring = "https://ia601409.us.archive.org/20/items/UsaNationalAnthemFromSilo/silosinging-us-anthem_64kb.mp3"
-        let url = NSURL(string: urlstring)
-        print("the url = \(url!)")
-        downloadFileFromURL(url: url!)
+    
+    func setPlay(){
+        if isEdit{
+            player.pause()
+        }else{
+            playSound(urlTo: nowPlaySong.file)
+        }
     }
   
 }

@@ -20,6 +20,8 @@ open class UserManger {
     open func SignInWithSoundMe(_ userName:String,UserEmail:String,userPassword:String,callback:(_ sucssesToSighnIN:Bool)->()){
 
     }
+    
+    
 
     open func SignInFaceback(UserEmail:String,userName:String,callback:@escaping (_ sucsses:Bool)->()){
         let userPassword:String = userName

@@ -22,8 +22,26 @@ class MainTabBarViewController: UITabBarController {
          
 
         }
+//        let urlstring = "https://ia601409.us.archive.org/20/items/UsaNationalAnthemFromSilo/silosinging-us-anthem_64kb.mp3"
+//        let url = NSURL(string: urlstring)
+//        print("the url = \(url!)")
+//        downloadFileFromURL(url: url!)
+        
     }
 
+//    func downloadFileFromURL(url:NSURL){
+//        var downloadTask:URLSessionDownloadTask
+//        downloadTask = URLSession.shared.downloadTask(with: url as URL, completionHandler: { (URL, response, error) -> Void in
+//            
+//            SongManager.Instance.saveURL(url: URL!)
+//            //self.play(url: URL!)
+//            
+//        })
+//        
+//        downloadTask.resume()
+//        
+//    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

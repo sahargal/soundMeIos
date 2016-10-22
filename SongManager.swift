@@ -18,5 +18,31 @@ public class SongManager {
         let songList = UserManger.Instance.getSongList(userId: userId)
          return songList
     }
+    
+    open func saveURL(url:URL)
+    {
+        _url = url
+    }
 
+    
+    
+    
+    private var _url: URL!
+    
+    public private (set) var url: URL {
+        
+        get {
+            
+            return _url
+            
+        }
+        
+        set {
+            
+            _url = newValue
+            
+        }
+        
+    }
+    
 }
