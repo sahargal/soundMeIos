@@ -13,14 +13,11 @@ class SettingViewController: UIViewController,UITextFieldDelegate,UIPickerViewDe
 
     @IBOutlet weak var changeRadiusLabel: UILabel!
     @IBOutlet weak var logOutLabel: UILabel!
-    @IBOutlet weak var optionRadiusPicker: UIPickerView!
-    let radiusArray = ["1 Km","2 Km","3 Km","4 Km","5 Km","6 Km","7 Km","8 Km","9 Km","10 Km"]
+    var actionSheetController: UIAlertController!
+    var newRadius:String! = nil
+    var radiusArray:[String] = [String]()
     
     override func viewDidLoad() {
-        optionRadiusPicker.isHidden = true
-        optionRadiusPicker.delegate = self
-        optionRadiusPicker.dataSource = self
-        optionRadiusPicker.tag = 1
         UIGraphicsBeginImageContext(self.view.frame.size)
         UIImage(named: "backgroundGeneral")!.draw(in: self.view.bounds)
         let image = UIGraphicsGetImageFromCurrentImageContext()
@@ -28,7 +25,7 @@ class SettingViewController: UIViewController,UITextFieldDelegate,UIPickerViewDe
         self.view.backgroundColor = UIColor(patternImage: image!)
         setDeafultRadius()
        
-        let tapGestureEditRadius = UITapGestureRecognizer(target: self, action: #selector(SettingViewController.editRadius))
+        let tapGestureEditRadius = UITapGestureRecognizer(target: self, action: #selector(SettingViewController.editRadiusAlertAction))
         tapGestureEditRadius.numberOfTapsRequired = 1
         self.changeRadiusLabel.addGestureRecognizer(tapGestureEditRadius)
        
@@ -36,10 +33,15 @@ class SettingViewController: UIViewController,UITextFieldDelegate,UIPickerViewDe
         tapGestureLogOut.numberOfTapsRequired = 1
         self.logOutLabel.addGestureRecognizer(tapGestureLogOut)
         
+        for x in 1...200{
+            radiusArray.append(String(x)+"km")
+        }
+        
+        
     }
     
     
-
+    
     
     private func setDeafultRadius(){
         let deafultRadius = 2
@@ -47,8 +49,23 @@ class SettingViewController: UIViewController,UITextFieldDelegate,UIPickerViewDe
         changeRadiusAcion()
     }
     
-      func editRadius(){
-        optionRadiusPicker.isHidden = false
+    func editRadiusAlertAction(){
+        let viewControllerAlert = UIViewController()
+        viewControllerAlert.preferredContentSize = CGSize(width: 250, height: 150)
+        
+        let editRadiusAlert = UIAlertController(title: "Choose distance", message: "", preferredStyle: UIAlertControllerStyle.alert)
+        editRadiusAlert.setValue(viewControllerAlert, forKey: "contentViewController")
+        editRadiusAlert.addAction(UIAlertAction(title: "Done", style:UIAlertActionStyle.default,handler:
+            {(action:UIAlertAction)->() in
+            self.changeRadiusLabel.text = self.newRadius
+        }))
+       editRadiusAlert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler:nil))
+        print(viewControllerAlert.view.frame.minY,viewControllerAlert.view.frame.origin.y,viewControllerAlert.view.frame.maxY)
+        let pickerViewRadius = UIPickerView(frame: CGRect(x: 0, y: editRadiusAlert.view.frame.size.height/2 - 150, width: 250, height: 300))
+        pickerViewRadius.delegate = self
+        pickerViewRadius.dataSource = self
+        viewControllerAlert.view.addSubview(pickerViewRadius)
+        self.present(editRadiusAlert, animated: true, completion: nil)
     }
     
     
@@ -83,14 +100,13 @@ class SettingViewController: UIViewController,UITextFieldDelegate,UIPickerViewDe
        return radiusArray[row]
     }
     
-      func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        changeRadiusLabel.text = String(row+1)
-        optionRadiusPicker.isHidden = true
+      internal func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+         newRadius =  String(row+1)
     }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let titleRadius = radiusArray[row]
-        let attributedString = NSAttributedString(string: titleRadius, attributes: [NSForegroundColorAttributeName : UIColor.white])
+        let attributedString = NSAttributedString(string: titleRadius, attributes: [NSForegroundColorAttributeName : UIColor.black])
         return attributedString
     }
     
@@ -141,14 +157,7 @@ class SettingViewController: UIViewController,UITextFieldDelegate,UIPickerViewDe
         self.present(msgAlert, animated: true, completion: nil)
     }
     
-//        func textFieldDidBeginEditing(_ textField: UITextField) {    //delegate method
-//    
-//        }
-//    
-//        func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {  //delegate method
-//            return false
-//        }
-//    
+  
         func textFieldShouldReturn(_ textField: UITextField) -> Bool
         {   //delegate method
             textField.resignFirstResponder()
