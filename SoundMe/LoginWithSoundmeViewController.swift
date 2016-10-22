@@ -53,6 +53,7 @@ class LoginWithSoundmeViewController: UIViewController,UITextFieldDelegate {
     }
     
     func didMoveToNext(){
+
         indicatorActivity.startAnimating()
         indicatorActivity.isHidden = false
         
