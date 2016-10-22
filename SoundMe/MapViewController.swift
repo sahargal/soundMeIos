@@ -40,7 +40,7 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewDe
         let longitude = locationManager.location?.coordinate.longitude
         let latitude = locationManager.location?.coordinate.latitude
         print(latitude,longitude)
-        let camera = GMSCameraPosition.camera(withLatitude: latitude!, longitude: longitude!, zoom: 18)
+        let camera = GMSCameraPosition.camera(withLatitude: 32.823373, longitude: 34.960331, zoom: 18)
         
         let mapView = GMSMapView.map(withFrame: CGRect.infinite, camera: camera)
         mapView.delegate = self

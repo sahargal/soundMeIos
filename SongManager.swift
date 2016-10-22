@@ -18,5 +18,4 @@ public class SongManager {
         let songList = UserManger.Instance.getSongList(userId: userId)
          return songList
     }
-
 }

@@ -8,40 +8,20 @@
 
 import Foundation
 
-public class SoungOut:Song{
-    
-    
-    
-    
+public class SongOut:Song{
     
     init(name:String,artist:String,time:String,icon:UIImage,file:String){
-        
         _file = file
-        
         super.init(name: name, artist: artist, time: time, icon: icon)
-        
-        
-        
     }
-    
-    
     
     private var _file: String!
-    
     public private (set) var file:String {
-        
         get {
-            
             return _file
-            
         }
-        
         set {
-            
             _file = newValue
-            
         }
-        
     }
-    
 }
